@@ -191,36 +191,24 @@ function Home() {
       <section className="bg-cream py-20 text-fg md:py-28">
         <div className="site-wrap">
           <h2 className="font-display text-4xl md:text-5xl">What partners say</h2>
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
-            {testimonials.map((item) =>
-              item.placeholder ? (
-                <article
-                  key="placeholder"
-                  className="flex flex-col rounded-2xl border border-dashed border-fg/25 bg-card p-6"
-                >
-                  <h3 className="font-display text-2xl">Third testimonial</h3>
-                  <p className="mt-3 flex-1 text-base text-muted">
-                    This card is reserved. The quote will be added here.
-                  </p>
-                </article>
-              ) : (
-                <figure key={item.name} className="flex flex-col rounded-2xl border border-line bg-card p-6">
-                  <blockquote className="flex-1 text-base leading-relaxed">“{item.quote}”</blockquote>
-                  <figcaption className="mt-6 border-t border-line pt-4">
-                    <p className="font-medium">{item.name}</p>
-                    <p className="text-sm text-muted">{item.role}</p>
-                    <a
-                      href={item.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-1 inline-flex min-h-11 items-center text-base underline decoration-fg/30 underline-offset-4"
-                    >
-                      Visit website
-                    </a>
-                  </figcaption>
-                </figure>
-              ),
-            )}
+          <div className="mt-10 grid max-w-5xl gap-4 md:grid-cols-2">
+            {testimonials.map((item) => (
+              <figure key={item.name} className="flex flex-col rounded-2xl border border-line bg-card p-6">
+                <blockquote className="flex-1 text-base leading-relaxed">“{item.quote}”</blockquote>
+                <figcaption className="mt-6 border-t border-line pt-4">
+                  <p className="font-medium">{item.name}</p>
+                  <p className="text-sm text-muted">{item.role}</p>
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-1 inline-flex min-h-11 items-center text-base underline decoration-fg/30 underline-offset-4"
+                  >
+                    Visit website
+                  </a>
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>

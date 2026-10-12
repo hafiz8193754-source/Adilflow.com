@@ -26,41 +26,41 @@ export const nav = [
 
 export const heroStats = [
   { value: "40+", label: "Live websites shipped" },
-  { value: "3.1×", label: "Average paid-media ROAS" },
-  { value: "4.2×", label: "Organic traffic lift" },
-  { value: "32K+", label: "Audience grown" },
+  { value: "40%", label: "Enrolment lift for Learn Quran With Kifayat" },
+  { value: "Up to 3×", label: "Example paid-media ROAS" },
+  { value: "Up to 4×", label: "Example organic traffic lift" },
 ] as const;
 
 export const marketingResults = [
   {
-    value: "3.1×",
-    label: "Average ROAS",
-    note: "Google Ads + Meta, trailing 90-day windows",
+    value: "Up to 3×",
+    label: "Example ROAS",
+    note: "Illustrative: best-case Google Ads + Meta accounts; results vary by offer and budget",
   },
   {
-    value: "4.2×",
-    label: "Organic traffic",
-    note: "Technical SEO and content systems, first two quarters",
+    value: "Up to 4×",
+    label: "Example organic traffic lift",
+    note: "Illustrative: example range from technical SEO and content work; not a guarantee",
   },
   {
     value: "40%",
     label: "Enrolment lift",
-    note: "Education launch after platform rebuild",
+    note: "Learn Quran With Kifayat, reported by the founder after launch",
   },
   {
-    value: "68%",
-    label: "Lower cost-per-lead",
-    note: "Versus prior in-house campaigns on the same spend",
+    value: "Up to 60%",
+    label: "Lower cost-per-lead (example)",
+    note: "Illustrative: example reduction versus prior in-house campaigns; varies by account",
   },
   {
-    value: "32K+",
+    value: "30K+",
     label: "Audience grown",
-    note: "Owned social and email across client accounts",
+    note: "Illustrative: combined owned social and email audiences across client accounts",
   },
   {
-    value: "2.4×",
-    label: "Qualified leads",
-    note: "After tracking, landing pages, and follow-up automation",
+    value: "Up to 2×",
+    label: "Qualified leads (example)",
+    note: "Illustrative: example lift after tracking, landing pages, and follow-up automation",
   },
 ] as const;
 
@@ -100,8 +100,8 @@ export const caseStudies = [
     channels: ["Google Ads", "Meta Ads", "TikTok Ads"],
     body: "Creative, landing pages, and conversion tracking planned together. Budgets moved toward the campaigns that produced qualified conversations — not vanity clicks.",
     metrics: [
-      { value: "3.1×", label: "Blended ROAS" },
-      { value: "68%", label: "Cost-per-lead reduction" },
+      { value: "Up to 3×", label: "Example blended ROAS (illustrative)" },
+      { value: "Up to 60%", label: "Example cost-per-lead reduction (illustrative)" },
     ],
   },
   {
@@ -113,7 +113,7 @@ export const caseStudies = [
     body: "Catalogue architecture, product credibility, and mobile checkout paths for independent brands — from wedding fashion to electronics and specialty retail.",
     metrics: [
       { value: "7", label: "Live commerce storefronts" },
-      { value: "2.4×", label: "Qualified enquiry lift" },
+      { value: "Up to 2×", label: "Example qualified enquiry lift (illustrative)" },
     ],
   },
 ] as const;
@@ -325,17 +325,6 @@ export const projects: Project[] = [
     tech: ["React", "Product UX", "Performance"],
   },
   {
-    slug: "eastern",
-    title: "Eastern Carolina Concrete Pros",
-    client: "Concrete contractor, USA",
-    category: "Web Development",
-    description:
-      "A local-services presence for residential and commercial concrete work across Eastern Carolina — built for estimates and local search.",
-    outcome: "A contractor site structured around proof, coverage, and enquiries.",
-    href: "https://easterncarolinaconcretepros.com/",
-    tech: ["Local SEO", "Lead Capture", "Service UX"],
-  },
-  {
     slug: "psco",
     title: "PSCO",
     client: "Industrial group",
@@ -392,17 +381,6 @@ export const projects: Project[] = [
     tech: ["WordPress", "Local SEO", "Lead Capture"],
   },
   {
-    slug: "veritus",
-    title: "Veritus Real Estate Services",
-    client: "Real estate services",
-    category: "Web Development",
-    description:
-      "A real-estate services site — listings logic, advisory positioning, and a contact path for buyers, sellers, and investors.",
-    outcome: "Professional property-services presence with enquiry capture.",
-    href: "https://veritusrealestateservices.com/",
-    tech: ["WordPress", "Lead Capture", "SEO"],
-  },
-  {
     slug: "dale",
     title: "Dale Cleaners",
     client: "Dry cleaning & laundry",
@@ -412,17 +390,6 @@ export const projects: Project[] = [
     outcome: "Local SEO and a simple service menu for a long-running cleaner.",
     href: "https://dalecleaners.com/",
     tech: ["Local SEO", "Service UX", "WhatsApp"],
-  },
-  {
-    slug: "maccall",
-    title: "MacCall Hotels",
-    client: "Hotel management & development",
-    category: "Web Development",
-    description:
-      "A hospitality-group site for hotel management and development — performance, guest experience, and operational capability.",
-    outcome: "An operator-grade presence for owners evaluating a management partner.",
-    href: "http://maccall.com/",
-    tech: ["Hospitality", "Corporate Web", "SEO"],
   },
   {
     slug: "hammad",
@@ -677,7 +644,6 @@ export const testimonials = [
     name: "M. Inzimam Sajid",
     role: "Founder, Inzimation Edu",
     href: "https://www.inzimationedu.com/",
-    placeholder: false,
   },
   {
     quote:
@@ -685,14 +651,6 @@ export const testimonials = [
     name: "Muhammad Kifayat Ullah",
     role: "Founder, Learn Quran With Kifayat",
     href: "https://learnquranwithkafayat.com/",
-    placeholder: false,
-  },
-  {
-    quote: "",
-    name: "",
-    role: "",
-    href: "",
-    placeholder: true,
   },
 ] as const;
 

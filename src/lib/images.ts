@@ -32,10 +32,6 @@ export const projectSources = {
       { src: "/images/projects/deep-clean-640.webp", w: 640, h: 400 },
       { src: "/images/projects/deep-clean-1200.webp", w: 1200, h: 750 },
   ],
-  "eastern": [
-      { src: "/images/projects/eastern-640.webp", w: 640, h: 400 },
-      { src: "/images/projects/eastern-1200.webp", w: 1200, h: 750 },
-  ],
   "fiescher": [
       { src: "/images/projects/fiescher-640.webp", w: 640, h: 400 },
       { src: "/images/projects/fiescher-1200.webp", w: 1200, h: 750 },
@@ -55,10 +51,6 @@ export const projectSources = {
   "maarij": [
       { src: "/images/projects/maarij-640.webp", w: 640, h: 400 },
       { src: "/images/projects/maarij-1200.webp", w: 1200, h: 750 },
-  ],
-  "maccall": [
-      { src: "/images/projects/maccall-640.webp", w: 640, h: 400 },
-      { src: "/images/projects/maccall-1200.webp", w: 1200, h: 750 },
   ],
   "nbfashion": [
       { src: "/images/projects/nbfashion-640.webp", w: 640, h: 400 },
@@ -95,10 +87,6 @@ export const projectSources = {
   "urke": [
       { src: "/images/projects/urke-640.webp", w: 640, h: 400 },
       { src: "/images/projects/urke-1200.webp", w: 1200, h: 750 },
-  ],
-  "veritus": [
-      { src: "/images/projects/veritus-640.webp", w: 640, h: 400 },
-      { src: "/images/projects/veritus-1200.webp", w: 1200, h: 750 },
   ],
   "willson": [
       { src: "/images/projects/willson-640.webp", w: 640, h: 400 },
