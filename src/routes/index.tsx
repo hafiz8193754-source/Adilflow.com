@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { portraitSources } from "@/lib/images";
 import { faqPageJson, pageHead } from "@/lib/seo";
 import {
+  agentAutomation,
   clientNames,
   faqs,
   heroStats,
@@ -54,6 +55,10 @@ function Home() {
               high-converting websites, AI workflows and SEO & paid-media funnels
               for businesses in the US, UK, Europe and the Gulf — one accountable
               partner instead of three vendors.
+            </p>
+            <p className="mt-4 max-w-xl border-l-2 border-accent pl-4 text-base font-medium leading-relaxed text-on-ink md:text-lg">
+              I can convert any digital workflow into automation with AI agents —
+              ops, lead follow-up, content, CRM, support and internal tools.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Button asChild variant="lime" size="lg">
@@ -141,6 +146,16 @@ function Home() {
       <section id="services" className="dark-surface scroll-mt-20 bg-ink py-20 md:py-28">
         <div className="site-wrap">
           <h2 className="font-display text-4xl text-on-ink md:text-5xl">Services</h2>
+          <div className="mt-8 rounded-2xl border border-accent/40 bg-ink-raised p-6 md:p-8">
+            <p className="text-sm tracking-widest text-accent uppercase">{agentAutomation.eyebrow}</p>
+            <h3 className="mt-2 font-display text-3xl text-on-ink md:text-4xl">{agentAutomation.title}</h3>
+            <p className="mt-3 max-w-3xl text-base text-on-ink-muted md:text-lg">{agentAutomation.body}</p>
+            <ul className="mt-5 flex flex-wrap gap-2">
+              {agentAutomation.areas.map((area) => (
+                <li key={area} className="rounded-full border border-ink-line px-3 py-1 text-sm text-on-ink">{area}</li>
+              ))}
+            </ul>
+          </div>
           <div className="mt-10 grid gap-4 md:grid-cols-2">
             {homeServices.map((service) => (
               <article key={service.slug} className="rounded-2xl border border-ink-line bg-ink-raised p-6">

@@ -2,7 +2,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { SiteShell } from "@/components/site-shell";
 import { Button } from "@/components/ui/button";
 import { pageHead } from "@/lib/seo";
-import { caseStudies, homeServices, moreServices, process, stack } from "@/lib/site";
+import { agentAutomation, caseStudies, homeServices, moreServices, process, stack } from "@/lib/site";
 
 const services = [...homeServices, ...moreServices];
 
@@ -12,7 +12,7 @@ export const Route = createFileRoute("/services")({
     pageHead({
       title: "Services — Web, AI, SEO & Paid Media | Adilflow",
       description:
-        "Full-stack web development, AI automation, SEO, and paid media from Muhammad Adil at Adilflow. One partner for the site, the workflow, and the growth.",
+        "Full-stack web development, AI agents that automate any digital workflow, SEO, and paid media from Muhammad Adil at Adilflow. One partner for the site, the workflow, and the growth.",
       path: "/services",
     }),
 });
@@ -27,6 +27,17 @@ function ServicesPage() {
           <p className="mt-4 text-base text-on-ink-muted md:text-lg">
             From marketing to development to AI automation — scoped as one engagement, or as a precise slice of it.
           </p>
+          <div className="mt-8 rounded-2xl border border-accent/40 bg-ink-raised p-6 md:p-8">
+            <p className="text-sm tracking-widest text-accent uppercase">{agentAutomation.eyebrow}</p>
+            <h2 className="mt-2 font-display text-3xl text-on-ink md:text-4xl">{agentAutomation.title}</h2>
+            <p className="mt-3 max-w-3xl text-base text-on-ink-muted md:text-lg">{agentAutomation.body}</p>
+            <ul className="mt-5 flex flex-wrap gap-2">
+              {agentAutomation.areas.map((area) => (
+                <li key={area} className="rounded-full border border-ink-line px-3 py-1 text-sm text-on-ink">{area}</li>
+              ))}
+            </ul>
+          </div>
+
         </div>
       </section>
 

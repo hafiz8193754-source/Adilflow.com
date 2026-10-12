@@ -446,7 +446,36 @@ export const projects: Project[] = [
   },
 ];
 
+export const agentAutomation = {
+  eyebrow: "AI agents",
+  title: "Any digital workflow, automated with AI agents.",
+  body: "If your team does it repeatedly on a screen, it can usually be automated. I map the workflow, build AI agents around it, and connect them to your existing tools — with human review where it matters.",
+  areas: [
+    "Operations",
+    "Lead follow-up",
+    "Content",
+    "CRM",
+    "Customer support",
+    "Reporting",
+    "Internal tools",
+  ],
+} as const;
+
 export const homeServices = [
+  {
+    slug: "ai",
+    title: "AI agents & workflow automation",
+    summary:
+      "Any repeatable digital workflow can be turned into automation with AI agents — operations, lead follow-up, content, CRM updates, support, and internal tools, wired into the stack you already use.",
+    points: [
+      "Map the workflow, then automate it end-to-end with AI agents",
+      "Lead capture, qualification, and follow-up automation",
+      "CRM updates, reporting, and operations workflows",
+      "Customer support assistants and content pipelines",
+      "ChatGPT API, Make.com, Zapier, and custom integrations",
+      "Human review steps and handover your team can run",
+    ],
+  },
   {
     slug: "full-stack",
     title: "Full-stack web development",
@@ -458,19 +487,6 @@ export const homeServices = [
       "WordPress when the brief calls for it",
       "Performance, SEO foundations, and analytics",
       "Ongoing iteration after launch",
-    ],
-  },
-  {
-    slug: "ai",
-    title: "AI automation & workflows",
-    summary:
-      "Practical AI that removes busywork — lead capture, support, content ops, and internal tools wired into how you already work.",
-    points: [
-      "ChatGPT API chatbots and assistants",
-      "Make.com & Zapier workflow systems",
-      "Lead qualification and follow-up automation",
-      "Content and reporting pipelines",
-      "Prompt systems your team can actually run",
     ],
   },
   {
