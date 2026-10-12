@@ -645,16 +645,6 @@ export const beyond = [
   },
 ] as const;
 
-export const testimonials = [
-  {
-    quote:
-      "Muhammad built our entire mathematics tutoring platform from scratch. The student progress tracking, class scheduling, and responsive design exceeded our expectations. Professional, timely, and technically brilliant.",
-    name: "M. Inzimam Sajid",
-    role: "Founder, Inzimation Edu",
-    href: "https://www.inzimationedu.com/",
-  },
-] as const;
-
 export const faqs = [
   {
     q: "How long does a project take?",
