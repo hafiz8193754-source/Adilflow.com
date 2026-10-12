@@ -655,17 +655,17 @@ export const testimonials = [
   },
   {
     quote:
-      "Our Quranic education website needed class scheduling, fee management, and WhatsApp integration. Muhammad delivered everything flawlessly. The site is beautiful, fast, and our enrolment increased 40% after launch.",
-    name: "Muhammad Kifayat Ullah",
-    role: "Founder, Learn Quran With Kafayat",
-    href: "https://learnquranwithkafayat.com/",
+      "Muhammad built a precise, compliance-minded website for our research-use-only catalogue — clear product documentation, lab-grade presentation, and a structure that keeps every page firmly in RUO territory. Fast, detail-oriented, and easy to work with.",
+    name: "Product team",
+    role: "ONYX Research",
+    href: "https://onyxhealth.net/",
   },
   {
     quote:
-      "Muhammad delivered a clean, conversion-ready payments website with clear product journeys and trust-first UX. Sharp communication, quick iterations, and a partner who understood how fintech should look and feel.",
-    name: "Product team",
-    role: "MetaX Payments",
-    href: "https://www.metaxpayments.com/",
+      "Muhammad gave NadGo a clean, modern wellness storefront that feels premium and on-brand. Thoughtful product storytelling, smooth mobile experience, and quick turnaround on every round of feedback.",
+    name: "Brand team",
+    role: "NadGo",
+    href: "https://www.nad-go.com/",
   },
 ] as const;
 
