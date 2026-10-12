@@ -79,7 +79,7 @@ export const sendContact = createServerFn({ method: "POST" })
         method: "POST",
         headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
         body: JSON.stringify({
-          from: "Adilflow <hello@adilflow.com>",
+          from: "Muhammad Adil <hello@adilflow.com>",
           to: [to],
           reply_to: data.email,
           subject: `New enquiry: ${data.subject || "Project"} — ${data.name}`.slice(0, 200),

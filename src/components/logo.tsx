@@ -5,9 +5,9 @@ export function Logo() {
     <Link
       to="/"
       className="inline-flex min-h-11 items-center text-on-ink"
-      aria-label="adilflow home"
+      aria-label="Muhammad Adil home"
     >
-      <svg viewBox="0 0 148 32" className="h-8 w-auto" role="img" aria-hidden="true">
+      <svg viewBox="0 0 230 32" className="h-8 w-auto" role="img" aria-hidden="true">
         <text
           x="0"
           y="25"
@@ -15,7 +15,7 @@ export function Logo() {
           fontFamily="Instrument Serif, Georgia, serif"
           fontSize="30"
         >
-          adilflow
+          Muhammad Adil
         </text>
       </svg>
     </Link>

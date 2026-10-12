@@ -1,4 +1,5 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
+import { AiVideos } from "@/components/ai-videos";
 import { SiteShell } from "@/components/site-shell";
 import { Button } from "@/components/ui/button";
 import { pageHead } from "@/lib/seo";
@@ -10,9 +11,9 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () =>
     pageHead({
-      title: "Services — Web, AI, SEO & Paid Media | Adilflow",
+      title: "Services — Web, AI, SEO & Paid Media | Muhammad Adil",
       description:
-        "Full-stack web development, AI agents that automate any digital workflow, SEO, and paid media from Muhammad Adil at Adilflow. One partner for the site, the workflow, and the growth.",
+        "Full-stack web development, AI agents that automate any digital workflow — Meta ads, Google ads, web development, social media marketing, and video generation — from Muhammad Adil. One partner for the site, the workflow, and the growth.",
       path: "/services",
     }),
 });
@@ -116,6 +117,7 @@ function ServicesPage() {
           </ol>
         </div>
       </section>
+      <AiVideos />
     </SiteShell>
   );
 }

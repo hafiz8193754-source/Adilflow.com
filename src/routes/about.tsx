@@ -11,9 +11,9 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () =>
     pageHead({
-      title: "About Muhammad Adil — Adilflow",
+      title: "About Muhammad Adil",
       description:
-        "Muhammad Adil is the founder of Adilflow. Full-stack development, AI automation, and growth since 2019, working with clients worldwide.",
+        "Muhammad Adil — full-stack development, AI automation, and growth since 2019, working with clients worldwide.",
       path: "/about",
     }),
 });
@@ -26,7 +26,7 @@ export function AboutPage() {
           <p className="text-sm tracking-widest text-accent uppercase">About</p>
           <h1 className="mt-3 font-display text-5xl text-on-ink md:text-6xl">Muhammad Adil</h1>
           <p className="mt-4 text-base text-on-ink-muted md:text-lg">
-            {site.role} — founder of Adilflow. {site.remote}.
+            {site.role}. {site.remote}.
           </p>
         </div>
       </section>
@@ -51,7 +51,7 @@ export function AboutPage() {
             <p className="mt-4 text-base leading-relaxed text-muted">
               Academic achiever with a 3.79 / 4 CGPA and Provincial Debate Champion — analytical
               precision and persuasive communication in the same brief. Fluent in English and Urdu,
-              with Arabic reading proficiency. Working with clients worldwide through Adilflow.
+              with Arabic reading proficiency. Working with clients worldwide.
             </p>
             <ul className="mt-6 grid gap-2 sm:grid-cols-2">
               {traits.map((trait) => (

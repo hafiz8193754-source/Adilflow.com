@@ -8,7 +8,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Adilflow — Web Development, AI Automation & Growth" },
+      { title: "Muhammad Adil — AI Agents, Automation, Web & Growth" },
       {
         name: "description",
         content:

@@ -21,7 +21,7 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () =>
     pageHead({
-      title: "Contact Muhammad Adil — Adilflow",
+      title: "Contact Muhammad Adil — Get a Quote",
       description:
         "Book a call with Muhammad Adil. WhatsApp +44 7878 268504 or hafiz8193754@gmail.com. Working with clients worldwide.",
       path: "/contact",

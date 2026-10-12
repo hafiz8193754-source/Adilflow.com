@@ -1,5 +1,5 @@
 export const site = {
-  name: "Adilflow",
+  name: "Muhammad Adil",
   person: "Muhammad Adil",
   role: "Full Stack Developer, AI Automation Specialist & Digital Marketer",
   shortRole: "Full-stack developer · AI automation · Growth",
@@ -20,7 +20,7 @@ export const nav = [
   { hash: "services", label: "Services" },
   { hash: "process", label: "Process" },
   { hash: "results", label: "Results" },
-  { hash: "pricing", label: "Pricing" },
+  { hash: "videos", label: "AI Videos" },
   { hash: "faq", label: "FAQ" },
 ] as const;
 
@@ -449,8 +449,13 @@ export const projects: Project[] = [
 export const agentAutomation = {
   eyebrow: "AI agents",
   title: "Any digital workflow, automated with AI agents.",
-  body: "If your team does it repeatedly on a screen, it can usually be automated. I map the workflow, build AI agents around it, and connect them to your existing tools — with human review where it matters.",
+  body: "I can convert any digital workflow into automation through AI agents — Meta ads, Google ads, web development, social media marketing, video generation, and any other digital work your team repeats on a screen. I map the workflow, build the agents, and connect them to your existing tools, with human review where it matters.",
   areas: [
+    "Meta ads",
+    "Google ads",
+    "Web development",
+    "Social media marketing",
+    "Video generation",
     "Operations",
     "Lead follow-up",
     "Content",
@@ -466,8 +471,11 @@ export const homeServices = [
     slug: "ai",
     title: "AI agents & workflow automation",
     summary:
-      "Any repeatable digital workflow can be turned into automation with AI agents — operations, lead follow-up, content, CRM updates, support, and internal tools, wired into the stack you already use.",
+      "Any digital workflow can be turned into automation with AI agents — Meta and Google ads, web development, social media marketing, video generation, lead follow-up, CRM, support, and internal tools, wired into the stack you already use.",
     points: [
+      "Meta ads and Google ads workflows run by AI agents, with approvals",
+      "Social media marketing: planning, drafting, and scheduling pipelines",
+      "AI video generation: product explainers and brand films",
       "Map the workflow, then automate it end-to-end with AI agents",
       "Lead capture, qualification, and follow-up automation",
       "CRM updates, reporting, and operations workflows",
@@ -600,8 +608,8 @@ export const journey = [
   },
   {
     year: "2025",
-    title: "Adilflow",
-    body: "Launched Adilflow — a single practice for product, automation, and growth, working with clients worldwide.",
+    title: "Independent practice",
+    body: "Launched an independent practice under my own name — product, AI automation, and growth, working with clients worldwide.",
   },
 ] as const;
 
@@ -701,71 +709,14 @@ export const testimonials = [
   },
 ] as const;
 
-export const plans = [
-  {
-    name: "Website project",
-    price: "From $500",
-    period: "one-time",
-    audience: "A focused site, scoped and shipped",
-    features: [
-      "Website build (about five pages)",
-      "Responsive UI and SEO foundations",
-      "Performance and analytics at launch",
-      "One build, from sketch to handover",
-    ],
-    cta: "Book a free call",
-    featured: false,
-  },
-  {
-    name: "Growth partnership",
-    price: "From $300",
-    period: "/ month",
-    audience: "Growing businesses, e-commerce, service brands",
-    features: [
-      "Social media management (1 platform)",
-      "Google & Meta ads (up to $1K ad spend)",
-      "AI automation setup (1 workflow)",
-      "Content creation (8 posts / month)",
-      "Advanced SEO + keyword tracking",
-      "Monthly performance report",
-      "Bi-weekly strategy calls (30 min)",
-      "Email support (48h response)",
-      "3 revisions per month",
-    ],
-    cta: "Book a free call",
-    featured: true,
-  },
-  {
-    name: "Custom systems",
-    price: "Get a quote",
-    period: "",
-    audience: "When the work does not fit a package",
-    features: [
-      "Custom websites, apps, and automation",
-      "Integrations, APIs, and internal tools",
-      "A written scope before any build",
-    ],
-    cta: "Get a quote",
-    featured: false,
-  },
-] as const;
-
-export const addons = [
-  { name: "AI chatbot integration", price: "$300 one-time" },
-  { name: "Brand identity package", price: "$250 one-time" },
-  { name: "Additional ads platform", price: "$100 / month" },
-  { name: "Priority support (24h)", price: "$80 / month" },
-  { name: "Monthly blog content (4)", price: "$150 / month" },
-] as const;
-
 export const faqs = [
   {
     q: "How long does a project take?",
     a: "A focused website is scoped on the discovery call, then designed and built in weekly cycles so you see progress early. Larger systems and monthly partnerships follow the same path — Discover, Strategy, Build, Compound — and the timeline is agreed in the proposal before work starts.",
   },
   {
-    q: "How does pricing work?",
-    a: "Website projects start from $500. A growth partnership starts from $300 a month: social on one platform, Google and Meta ads (up to $1K ad spend), one AI workflow, eight posts a month, advanced SEO and keyword tracking, a monthly report, bi-weekly strategy calls, email support, and three revisions. Custom systems are quoted after a discovery call. One-time projects and monthly retainers are both available. Ad spend is billed separately.",
+    q: "How are projects quoted?",
+    a: "Every engagement is quoted to the brief after a free discovery call — websites, AI agent automation, video generation, and monthly growth partnerships alike. You get a written scope and quote before any work starts. One-time projects and monthly retainers are both available; ad spend is billed separately.",
   },
   {
     q: "What payment methods do you accept?",
@@ -792,12 +743,15 @@ export const subjects = [
   "SEO",
   "Paid media & growth",
   "Custom systems",
-  "Pricing",
+  "AI video generation",
+  "Get a quote",
 ] as const;
 
 export const budgets = [
-  "Website project — from $500",
-  "Growth partnership — from $300 / month",
+  "Website project",
+  "Growth partnership (monthly)",
+  "AI agent automation",
+  "AI video generation",
   "Custom systems",
   "Not sure yet",
 ] as const;
@@ -819,3 +773,32 @@ export const stack = [
     items: ["MySQL", "MongoDB", "REST", "GraphQL", "ChatGPT API"],
   },
 ] as const;
+
+export const aiVideos = [
+  {
+    src: "/videos/ai-agents/01.mp4",
+    poster: "/videos/ai-agents/01.jpg",
+    title: "Onyx Dual-Chamber Pen — 3D explainer",
+    caption: "3D product explainer mixing teaser and technical breakdown, created through AI agents.",
+  },
+  {
+    src: "/videos/ai-agents/02.mp4",
+    poster: "/videos/ai-agents/02.jpg",
+    title: "Onyx Dual-Chamber Pen — technical walkthrough",
+    caption: "Companion explainer in the same pen series, created through AI agents.",
+  },
+  {
+    src: "/videos/ai-agents/03.mp4",
+    poster: "/videos/ai-agents/03.jpg",
+    title: "Onyx Health — brand film I",
+    caption: "Brand film for the Onyx Health research range (BPC-157, MOTS-c, NAD+), created through AI agents.",
+  },
+  {
+    src: "/videos/ai-agents/04.mp4",
+    poster: "/videos/ai-agents/04.jpg",
+    title: "Onyx Health — brand film II: lab & supply",
+    caption: "Brand film on the laboratory and supply programme, created through AI agents.",
+  },
+] as const;
+
+export const ruoDisclaimer = "For laboratory research use only. Not for human consumption.";

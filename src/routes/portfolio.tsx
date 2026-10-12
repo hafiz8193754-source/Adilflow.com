@@ -12,7 +12,7 @@ export const Route = createFileRoute("/portfolio")({
   component: PortfolioPage,
   head: () =>
     pageHead({
-      title: "Selected Work — 40+ Live Websites | Adilflow",
+      title: "Selected Work — 40+ Live Websites | Muhammad Adil",
       description:
         "Live websites by Muhammad Adil: education, home services, hospitality, commerce, and growth brands. A selection from 40+ shipped sites.",
       path: "/portfolio",

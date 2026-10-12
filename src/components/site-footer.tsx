@@ -6,7 +6,6 @@ const explore = [
   { to: "/portfolio" as const, label: "Work" },
   { to: "/services" as const, label: "Services" },
   { to: "/about" as const, label: "About" },
-  { to: "/pricing" as const, label: "Pricing" },
   { to: "/contact" as const, label: "Contact" },
 ];
 
@@ -15,9 +14,9 @@ export function SiteFooter() {
     <footer className="dark-surface border-t border-ink-line bg-ink text-on-ink">
       <div className="site-wrap grid gap-10 py-14 md:grid-cols-12">
         <div className="md:col-span-5">
-          <p className="font-display text-3xl">adilflow</p>
+          <p className="font-display text-3xl">Muhammad Adil</p>
           <p className="mt-3 max-w-sm text-base text-on-ink-muted">
-            Websites, AI automation, and growth — one accountable partner.
+            Any digital workflow, automated with AI agents — websites, ads, social, and video. One accountable partner.
           </p>
           <p className="mt-5 text-sm text-on-ink">Remote · {site.remote}</p>
         </div>
@@ -81,7 +80,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="site-wrap border-t border-ink-line py-5 text-sm text-on-ink-muted">
-        © {new Date().getFullYear()} Adilflow. All rights reserved.
+        © {new Date().getFullYear()} Muhammad Adil. All rights reserved.
       </div>
     </footer>
   );

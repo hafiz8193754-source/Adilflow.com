@@ -1,7 +1,7 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
-import { PricingCards } from "@/components/pricing-cards";
+import { AiVideos } from "@/components/ai-videos";
 import { ProjectCard } from "@/components/project-card";
 import { ResponsiveImage } from "@/components/responsive-image";
 import { SiteShell } from "@/components/site-shell";
@@ -26,9 +26,9 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () =>
     pageHead({
-      title: "Adilflow — Web Development, AI Automation & Growth",
+      title: "Muhammad Adil — AI Agents, Automation, Web & Growth",
       description:
-        "Muhammad Adil builds fast, high-converting websites, AI automation and SEO & paid-media growth systems for businesses worldwide. Book a free call.",
+        "Muhammad Adil converts any digital workflow into automation with AI agents — Meta & Google ads, web development, social media and video generation for businesses worldwide. Book a free call.",
       path: "/",
     }),
 });
@@ -51,14 +51,15 @@ function Home() {
               <em className="text-accent italic">engineered as one system.</em>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-on-ink-muted md:text-lg">
-              I'm Muhammad Adil, founder of Adilflow. I design, build and scale
+              I'm Muhammad Adil. I design, build and scale
               high-converting websites, AI workflows and SEO & paid-media funnels
               for businesses in the US, UK, Europe and the Gulf — one accountable
               partner instead of three vendors.
             </p>
             <p className="mt-4 max-w-xl border-l-2 border-accent pl-4 text-base font-medium leading-relaxed text-on-ink md:text-lg">
-              I can convert any digital workflow into automation with AI agents —
-              ops, lead follow-up, content, CRM, support and internal tools.
+              I can convert any digital workflow into automation through AI agents —
+              Meta ads, Google ads, web development, social media marketing, video
+              generation, and any other digital work your team does today.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Button asChild variant="lime" size="lg">
@@ -85,7 +86,7 @@ function Home() {
               <ResponsiveImage
                 sources={portraitSources}
                 sizes="260px"
-                alt="Muhammad Adil, founder of Adilflow"
+                alt="Muhammad Adil"
                 priority
                 className="aspect-[260/285] w-full object-cover object-top"
               />
@@ -173,6 +174,8 @@ function Home() {
         </div>
       </section>
 
+      <AiVideos />
+
       <section id="process" className="scroll-mt-20 bg-cream py-20 text-fg md:py-28">
         <div className="site-wrap">
           <h2 className="font-display text-4xl md:text-5xl">Process</h2>
@@ -225,18 +228,6 @@ function Home() {
               </figure>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section id="pricing" className="scroll-mt-20 bg-cream-deep py-20 text-fg md:py-28">
-        <div className="site-wrap">
-          <h2 className="font-display text-4xl md:text-5xl">Pricing</h2>
-          <div className="mt-10">
-            <PricingCards />
-          </div>
-          <p className="mt-6 text-base text-muted">
-            Ad spend is billed separately. Payment by bank transfer, Wise or Payoneer.
-          </p>
         </div>
       </section>
 
