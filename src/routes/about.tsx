@@ -1,3 +1,4 @@
+import { CtaStrip } from "@/components/cta-strip";
 import { createFileRoute } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 import { LinkedInIcon } from "@/components/icons";
@@ -13,7 +14,7 @@ export const Route = createFileRoute("/about")({
     pageHead({
       title: "About Muhammad Adil",
       description:
-        "Muhammad Adil — full-stack development, AI automation, and growth since 2019, working with clients worldwide.",
+        "Muhammad Adil — full-stack development, AI automation, and growth since 2019, working with clients worldwide. Contact by email or WhatsApp to hire.",
       path: "/about",
     }),
 });
@@ -152,6 +153,7 @@ export function AboutPage() {
           </div>
         </div>
       </section>
+      <CtaStrip />
     </SiteShell>
   );
 }

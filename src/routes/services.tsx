@@ -1,3 +1,4 @@
+import { CtaStrip } from "@/components/cta-strip";
 import { Link, createFileRoute } from "@tanstack/react-router";
 import { AiVideos } from "@/components/ai-videos";
 import { SiteShell } from "@/components/site-shell";
@@ -13,7 +14,7 @@ export const Route = createFileRoute("/services")({
     pageHead({
       title: "Services — Web, AI, SEO & Paid Media | Muhammad Adil",
       description:
-        "Full-stack web development, AI agents that automate any digital workflow — Meta ads, Google ads, web development, social media marketing, and video generation — from Muhammad Adil. One partner for the site, the workflow, and the growth.",
+        "Full-stack web development, AI agents that automate any digital workflow — Meta ads, Google ads, web development, social media marketing, and video generation — from Muhammad Adil. One partner for the site, the workflow, and the growth. Get a quote today.",
       path: "/services",
     }),
 });
@@ -118,6 +119,7 @@ function ServicesPage() {
         </div>
       </section>
       <AiVideos />
+      <CtaStrip />
     </SiteShell>
   );
 }

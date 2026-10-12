@@ -12,7 +12,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Muhammad Adil builds fast, high-converting websites, AI automation and SEO & paid-media growth systems for businesses worldwide. Book a free call.",
+          "Muhammad Adil builds fast, high-converting websites, AI automation and SEO & paid-media growth systems for businesses worldwide. Get a quote by email or WhatsApp.",
       },
       { name: "theme-color", content: "#070B14" },
       { name: "author", content: "Muhammad Adil" },

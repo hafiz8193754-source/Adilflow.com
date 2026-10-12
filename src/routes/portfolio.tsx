@@ -1,3 +1,4 @@
+import { CtaStrip } from "@/components/cta-strip";
 import { useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { ProjectCard } from "@/components/project-card";
@@ -14,7 +15,7 @@ export const Route = createFileRoute("/portfolio")({
     pageHead({
       title: "Selected Work — 40+ Live Websites | Muhammad Adil",
       description:
-        "Live websites by Muhammad Adil: education, home services, hospitality, commerce, and growth brands. A selection from 40+ shipped sites.",
+        "Live websites by Muhammad Adil: education, home services, hospitality, commerce, and growth brands. A selection from 40+ shipped sites. Get a quote for yours.",
       path: "/portfolio",
     }),
 });
@@ -70,6 +71,7 @@ function PortfolioPage() {
           </div>
         </div>
       </section>
+      <CtaStrip />
     </SiteShell>
   );
 }

@@ -12,7 +12,9 @@ import { CheckCircle2 } from "lucide-react";
 import { LinkedInIcon } from "@/components/icons";
 import { SiteShell } from "@/components/site-shell";
 import { Button } from "@/components/ui/button";
-import { pageHead } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
+import { contactPageJson, faqPageJson, pageHead } from "@/lib/seo";
+import { faqs } from "@/lib/site";
 import { budgets, site, subjects } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { sendContact } from "@/lib/contact/send-contact";
@@ -21,9 +23,9 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () =>
     pageHead({
-      title: "Contact Muhammad Adil — Get a Quote",
+      title: "Hire a Web Developer & AI Automation Expert — Contact Muhammad Adil | Get a Quote",
       description:
-        "Book a call with Muhammad Adil. WhatsApp +44 7878 268504 or hafiz8193754@gmail.com. Working with clients worldwide.",
+        "Hire Muhammad Adil for web development, AI agents automation and Meta/Google ads. Send an enquiry, email hello@adilflow.com or WhatsApp +44 7878 268504 for a free quote within 24 hours.",
       path: "/contact",
     }),
 });
@@ -110,6 +112,8 @@ function ContactPage() {
 
   return (
     <SiteShell>
+      <JsonLd data={contactPageJson} />
+      <JsonLd data={faqPageJson(faqs)} />
       <section className="dark-surface bg-ink py-16 md:py-20">
         <div className="site-wrap max-w-3xl">
           <p className="text-sm tracking-widest text-accent uppercase">Contact</p>
@@ -293,7 +297,7 @@ function ContactPage() {
             <div className="rounded-2xl border border-line bg-card p-5">
               <p className="text-base font-medium">Remote</p>
               <p className="mt-1 text-base text-accent-ink">{site.remote}</p>
-              <p className="mt-1 text-sm text-muted">Calls scheduled around your time zone.</p>
+              <p className="mt-1 text-sm text-muted">Replies by email or WhatsApp, around your time zone.</p>
             </div>
           </aside>
         </div>

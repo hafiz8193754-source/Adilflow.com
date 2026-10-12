@@ -52,7 +52,29 @@ export const professionalServiceJson = {
     name: site.person,
   },
   areaServed: ["Worldwide", "US", "UK", "EU", "Gulf"],
-  sameAs: [site.linkedin],
+  sameAs: [site.linkedin, site.whatsappBase],
+  description:
+    "Hire Muhammad Adil for web development, AI agents automation, SEO and Meta/Google ads. Contact by email or WhatsApp for a quote.",
+  knowsAbout: ["Web development", "AI agents automation", "Meta ads", "Google ads", "SEO", "AI video generation"],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      email: site.email,
+      telephone: site.phoneTel,
+      url: `${ORIGIN}/contact`,
+      areaServed: ["Worldwide", "US", "GB", "EU", "AE", "SA"],
+      availableLanguage: ["English", "Urdu"],
+    },
+  ],
+};
+
+export const contactPageJson = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact Muhammad Adil — Get a Quote",
+  url: `${ORIGIN}/contact`,
+  about: { "@type": "ProfessionalService", name: "Muhammad Adil", email: site.email, telephone: site.phoneTel },
 };
 
 export function faqPageJson(faqs: readonly { q: string; a: string }[]) {

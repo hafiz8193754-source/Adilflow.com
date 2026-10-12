@@ -26,9 +26,9 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () =>
     pageHead({
-      title: "Muhammad Adil — AI Agents, Automation, Web & Growth",
+      title: "Hire Muhammad Adil — AI Agents, Web Development & Ads | Get a Quote",
       description:
-        "Muhammad Adil converts any digital workflow into automation with AI agents — Meta & Google ads, web development, social media and video generation for businesses worldwide. Book a free call.",
+        "Muhammad Adil converts any digital workflow into automation with AI agents — Meta & Google ads, web development, social media and video generation for businesses worldwide. Get a quote by email or WhatsApp.",
       path: "/",
     }),
 });
@@ -63,7 +63,7 @@ function Home() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Button asChild variant="lime" size="lg">
-                <a href="#contact">Book a free call →</a>
+                <a href="#contact">Get a quote →</a>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <a href="#work">See selected work</a>
@@ -245,7 +245,7 @@ function Home() {
           <h2 className="font-display text-4xl text-on-ink md:text-5xl">Have a project in mind? Let's talk.</h2>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Button asChild variant="lime" size="lg">
-              <Link to="/contact">Book a free call</Link>
+              <Link to="/contact">Get a quote</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
               <a href={site.whatsapp} target="_blank" rel="noreferrer">

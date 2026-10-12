@@ -556,7 +556,7 @@ export const process = [
   {
     n: "01",
     title: "Discover",
-    body: "A focused call to understand the business, the constraint, and what success actually looks like.",
+    body: "A focused conversation by email or WhatsApp to understand the business, the constraint, and what success actually looks like.",
   },
   {
     n: "02",
@@ -712,11 +712,11 @@ export const testimonials = [
 export const faqs = [
   {
     q: "How long does a project take?",
-    a: "A focused website is scoped on the discovery call, then designed and built in weekly cycles so you see progress early. Larger systems and monthly partnerships follow the same path — Discover, Strategy, Build, Compound — and the timeline is agreed in the proposal before work starts.",
+    a: "A focused website is scoped from your enquiry, then designed and built in weekly cycles so you see progress early. Larger systems and monthly partnerships follow the same path — Discover, Strategy, Build, Compound — and the timeline is agreed in the proposal before work starts.",
   },
   {
     q: "How are projects quoted?",
-    a: "Every engagement is quoted to the brief after a free discovery call — websites, AI agent automation, video generation, and monthly growth partnerships alike. You get a written scope and quote before any work starts. One-time projects and monthly retainers are both available; ad spend is billed separately.",
+    a: "Every engagement is quoted to the brief after you send an enquiry by email, WhatsApp or the contact form — websites, AI agent automation, video generation, and monthly growth partnerships alike. You get a written scope and quote before any work starts. One-time projects and monthly retainers are both available; ad spend is billed separately.",
   },
   {
     q: "What payment methods do you accept?",
@@ -728,11 +728,11 @@ export const faqs = [
   },
   {
     q: "Do you work remotely across time zones?",
-    a: "Yes. I work with clients in the US, UK, Europe, and the Gulf. Communication is remote, and calls are scheduled around your time zone.",
+    a: "Yes. I work with clients in the US, UK, Europe, and the Gulf. Communication is remote by email and WhatsApp, around your time zone.",
   },
   {
     q: "What support is there after launch?",
-    a: "One-time projects include a handover, and I stay available for fixes and iteration. A growth partnership covers ongoing SEO, ads, content, and automation after the site is live, including email support and regular strategy calls.",
+    a: "One-time projects include a handover, and I stay available for fixes and iteration. A growth partnership covers ongoing SEO, ads, content, and automation after the site is live, including email and WhatsApp support and regular strategy check-ins.",
   },
 ] as const;
 

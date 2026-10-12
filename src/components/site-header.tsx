@@ -31,7 +31,7 @@ export function SiteHeader() {
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
-  const book =
+  const quote =
     pathname === "/"
       ? { to: "/" as const, hash: "contact" }
       : { to: "/contact" as const, hash: undefined };
@@ -67,8 +67,8 @@ export function SiteHeader() {
             </a>
           </Button>
           <Button asChild variant="lime">
-            <Link to={book.to} hash={book.hash}>
-              Book a free call
+            <Link to={quote.to} hash={quote.hash}>
+              Get a quote
             </Link>
           </Button>
         </div>
@@ -109,8 +109,8 @@ export function SiteHeader() {
               </a>
             </Button>
             <Button asChild variant="lime" className="w-full">
-              <Link to={book.to} hash={book.hash}>
-                Book a free call
+              <Link to={quote.to} hash={quote.hash}>
+                Get a quote
               </Link>
             </Button>
           </div>
