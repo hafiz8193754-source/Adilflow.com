@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/instrument-serif-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/instrument-serif-400-italic.woff2") format("woff2");
+}
+
+@theme {
+  --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-ink: #070b14;
+  --color-ink-raised: #101828;
+  --color-ink-line: #2c3a50;
+  --color-cream: #f6f3ec;
+  --color-cream-deep: #ebe6db;
+  --color-fg: #12151c;
+  --color-muted: #3e4654;
+  --color-on-ink: #f6f3ec;
+  --color-on-ink-muted: #c9d0dc;
+  --color-accent: #d9f27a;
+  --color-accent-hover: #e7f6a3;
+  --color-accent-ink: #3f4c0c;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-ink: #06281a;
+  --color-danger: #7f1d1d;
+  --color-line: #ddd6c8;
+  --color-card: #fffcf7;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-ink);
+    color: var(--color-on-ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.55;
+    overflow-x: clip;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-fg);
+    outline-offset: 3px;
+  }
+
+  .dark-surface :focus-visible {
+    outline-color: var(--color-accent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+.site-wrap {
+  width: min(100% - 2.5rem, 72rem);
+  margin-inline: auto;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
