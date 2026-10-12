@@ -3,7 +3,7 @@ export const site = {
   person: "Muhammad Adil",
   role: "Full Stack Developer, AI Automation Specialist & Digital Marketer",
   shortRole: "Full-stack developer · AI automation · Growth",
-  email: "hafiz8193754@gmail.com",
+  email: "hello@adilflow.com",
   phoneDisplay: "+44 7878 268504",
   phoneTel: "+447878268504",
   whatsapp:
