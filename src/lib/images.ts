@@ -4,6 +4,14 @@ export const portraitSources = [
 ] as const;
 
 export const projectSources = {
+  "metax": [
+      { src: "/images/projects/metax-640.webp", w: 640, h: 400 },
+      { src: "/images/projects/metax-1200.webp", w: 1200, h: 750 },
+  ],
+  "nad-go": [
+      { src: "/images/projects/nad-go-640.webp", w: 640, h: 400 },
+      { src: "/images/projects/nad-go-1200.webp", w: 1200, h: 750 },
+  ],
   "onyx": [
       { src: "/images/projects/onyx-640.webp", w: 640, h: 400 },
       { src: "/images/projects/onyx-1200.webp", w: 1200, h: 750 },
@@ -51,10 +59,6 @@ export const projectSources = {
   "kafayat": [
       { src: "/images/projects/kafayat-640.webp", w: 640, h: 400 },
       { src: "/images/projects/kafayat-1200.webp", w: 1200, h: 750 },
-  ],
-  "maarij": [
-      { src: "/images/projects/maarij-640.webp", w: 640, h: 400 },
-      { src: "/images/projects/maarij-1200.webp", w: 1200, h: 750 },
   ],
   "nbfashion": [
       { src: "/images/projects/nbfashion-640.webp", w: 640, h: 400 },

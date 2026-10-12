@@ -66,6 +66,8 @@ export const marketingResults = [
 
 export const clientNames = [
   "ONYX Research",
+  "MetaX Payments",
+  "NadGo",
   "TikMove",
   "Saucedo Pools & Spas",
   "Ferienwohnung Fiescheralp",
@@ -158,6 +160,8 @@ export type Project = {
 
 export const homeProjectOrder = [
   "onyx",
+  "metax",
+  "nad-go",
   "tikmove",
   "saucedo",
   "inzimation",
@@ -178,6 +182,30 @@ export const projects: Project[] = [
     href: "https://onyxhealth.net/",
     tech: ["Custom Web", "E-commerce", "SEO"],
     homeLabel: "ONYX Research (UK/EU)",
+  },
+  {
+    slug: "metax",
+    title: "MetaX Payments",
+    client: "Global digital payments platform",
+    category: "Web Development",
+    description:
+      "A trust-first fintech site for a global payments platform — business and personal accounts, multi-currency rails (GBP Faster Payments, EUR SEPA Instant, USD ACH/SWIFT, AED accounts), live FX rates, and a clear path to opening a business account.",
+    outcome: "Product, pricing, and onboarding journeys unified into one credible financial brand.",
+    href: "https://www.metaxpayments.com/",
+    tech: ["Custom Web", "Fintech UX", "Lead Capture"],
+    homeLabel: "MetaX Payments",
+  },
+  {
+    slug: "nad-go",
+    title: "NadGo™",
+    client: "NAD+ wellness & longevity brand, UK & EU",
+    category: "E-commerce",
+    description:
+      "A premium multilingual storefront for a NAD+ wellness and longevity brand — product range including the Dual Chamber Pen, a research journal, B2B wholesale partnerships, and purity and quality standards front and centre.",
+    outcome: "Education-led shopping, wholesale enquiries, and international shipping in one brand system.",
+    href: "https://www.nad-go.com/",
+    tech: ["E-commerce", "Multilingual", "SEO"],
+    homeLabel: "NadGo™",
   },
   {
     slug: "inzimation",
@@ -415,17 +443,6 @@ export const projects: Project[] = [
     outcome: "A working shop with clear merchandising and mobile commerce.",
     href: "https://hammadtrade.shop/",
     tech: ["E-commerce", "Catalogue UX", "SEO"],
-  },
-  {
-    slug: "maarij",
-    title: "Maarij Sports",
-    client: "Sportswear & equipment",
-    category: "E-commerce",
-    description:
-      "A sports retail store — kits, equipment, and a product grid built for athletes who already know what they came for.",
-    outcome: "Category architecture and a conversion-led sports shop.",
-    href: "https://maarijsports.com/",
-    tech: ["E-commerce", "Product UX", "SEO"],
   },
 ];
 
