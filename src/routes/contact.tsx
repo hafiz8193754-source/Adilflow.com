@@ -287,13 +287,6 @@ function ContactPage() {
               hint="Response within 24 hours"
               href={`mailto:${site.email}`}
             />
-            <Info
-              title="LinkedIn"
-              body={site.person}
-              hint={site.linkedinLabel}
-              href={site.linkedin}
-              icon
-            />
             <div className="rounded-2xl border border-line bg-card p-5">
               <p className="text-base font-medium">Remote</p>
               <p className="mt-1 text-base text-accent-ink">{site.remote}</p>

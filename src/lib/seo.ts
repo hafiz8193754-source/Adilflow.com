@@ -52,10 +52,10 @@ export const professionalServiceJson = {
     name: site.person,
   },
   areaServed: ["Worldwide", "US", "UK", "EU", "Gulf"],
-  sameAs: [site.linkedin, site.whatsappBase],
+  sameAs: [site.whatsappBase],
   description:
     "Hire Muhammad Adil for web development, AI agents automation, SEO and Meta/Google ads. Contact by email or WhatsApp for a quote.",
-  knowsAbout: ["Web development", "AI agents automation", "Meta ads", "Google ads", "SEO", "AI video generation"],
+  knowsAbout: ["Web development", "AI agents automation", "Meta ads", "Google ads", "LinkedIn ads", "TikTok ads", "SEO", "AI video generation"],
   contactPoint: [
     {
       "@type": "ContactPoint",

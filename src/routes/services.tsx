@@ -14,7 +14,7 @@ export const Route = createFileRoute("/services")({
     pageHead({
       title: "Services — Web, AI, SEO & Paid Media | Muhammad Adil",
       description:
-        "Full-stack web development, AI agents that automate any digital workflow — Meta ads, Google ads, web development, social media marketing, and video generation — from Muhammad Adil. One partner for the site, the workflow, and the growth. Get a quote today.",
+        "Full-stack web development, AI agents that automate any digital workflow — Meta, Google, LinkedIn and TikTok ads campaigns, web development, social media marketing, and video generation — from Muhammad Adil. One partner for the site, the workflow, and the growth. Get a quote today.",
       path: "/services",
     }),
 });

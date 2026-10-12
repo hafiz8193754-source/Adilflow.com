@@ -9,8 +9,6 @@ export const site = {
   whatsapp:
     "https://wa.me/447878268504?text=Hi%20Muhammad%2C%20I%27d%20like%20to%20discuss%20a%20project.",
   whatsappBase: "https://wa.me/447878268504",
-  linkedin: "https://www.linkedin.com/in/muhammad-adil-77248b2ab/",
-  linkedinLabel: "linkedin.com/in/muhammad-adil",
   availability: "Available for new projects",
   remote: "Working with clients worldwide",
 } as const;
@@ -26,7 +24,7 @@ export const nav = [
 
 export const heroStats = [
   { value: "40+", label: "Live websites shipped" },
-  { value: "40%", label: "Enrolment lift for Learn Quran With Kafayat" },
+  { value: "4", label: "Ad platforms automated by AI agents" },
   { value: "Up to 3×", label: "Example paid-media ROAS" },
   { value: "Up to 4×", label: "Example organic traffic lift" },
 ] as const;
@@ -41,11 +39,6 @@ export const marketingResults = [
     value: "Up to 4×",
     label: "Example organic traffic lift",
     note: "Illustrative: example range from technical SEO and content work; not a guarantee",
-  },
-  {
-    value: "40%",
-    label: "Enrolment lift",
-    note: "Learn Quran With Kafayat, reported by the founder after launch",
   },
   {
     value: "Up to 60%",
@@ -73,28 +66,14 @@ export const clientNames = [
   "Ferienwohnung Fiescheralp",
   "Urke Gartneri",
   "Inzimation Edu",
-  "Willson Home Patient Care",
   "Team Pat The Roc",
   "AI Aunties",
-  "Dale Cleaners",
   "ProBuilt Window Screens",
   "NB Fashion",
   "PSCO",
 ] as const;
 
 export const caseStudies = [
-  {
-    slug: "education",
-    sector: "Education",
-    title: "A tutoring brand that finally converts visitors into enrolled students",
-    client: "Learn Quran With Kafayat",
-    channels: ["Web platform", "WhatsApp", "Local SEO"],
-    body: "Class scheduling, fee management, and WhatsApp were rebuilt as one enrolment path — not three disconnected pages. Families could understand the offer and book without a phone tag.",
-    metrics: [
-      { value: "40%", label: "Enrolment increase after launch" },
-      { value: "1", label: "WhatsApp path from every page" },
-    ],
-  },
   {
     slug: "paid",
     sector: "Performance",
@@ -167,7 +146,6 @@ export const homeProjectOrder = [
   "inzimation",
   "fiescher",
   "urke",
-  "willson",
 ] as const;
 
 export const projects: Project[] = [
@@ -266,40 +244,6 @@ export const projects: Project[] = [
     homeLabel: "Ferienwohnung Fiescheralp (Switzerland)",
   },
   {
-    slug: "ah-solar",
-    title: "AH Solar Solutions",
-    client: "Wholesale solar",
-    category: "E-commerce",
-    description:
-      "A conversion-focused wholesale site for Jinko, Canadian Solar, Longi, and JA Solar panels — built to turn catalogue browsers into qualified enquiries.",
-    outcome: "Clear product architecture, enquiry-first UX, and search-ready copy.",
-    href: "https://www.ahsolarsolutions.com/",
-    tech: ["React", "SEO", "Lead Capture"],
-  },
-  {
-    slug: "willson",
-    title: "Willson Home Patient Care",
-    client: "Home healthcare",
-    category: "Web Development",
-    description:
-      "A calm, trustworthy service site for 24/7 nursing, caregiving, and in-home support — designed so families can understand care options and book with confidence.",
-    outcome: "Service clarity, mobile-first booking paths, and a professional care presence.",
-    href: "https://www.willsonhomepatientcare.com/",
-    tech: ["React", "Responsive UI", "Local SEO"],
-    homeLabel: "Willson Home Patient Care",
-  },
-  {
-    slug: "kafayat",
-    title: "Learn Quran With Kafayat",
-    client: "Quranic education",
-    category: "Web Development",
-    description:
-      "Class scheduling, fee management, and WhatsApp integration for Tajweed, Tafseer, and Quran programmes — a site families can actually enrol through.",
-    outcome: "Enrolment increased 40% after launch.",
-    href: "https://learnquranwithkafayat.com/",
-    tech: ["Scheduling", "WhatsApp", "Local SEO"],
-  },
-  {
     slug: "ptpc",
     title: "PTPC Tourism",
     client: "Tourism promotion council",
@@ -309,17 +253,6 @@ export const projects: Project[] = [
     outcome: "A credible public-facing presence with destination storytelling.",
     href: "https://ptpctourism.com/",
     tech: ["HTML/CSS", "Content System", "SEO"],
-  },
-  {
-    slug: "rao",
-    title: "Rao Home Appliances",
-    client: "Retail & e-commerce",
-    category: "E-commerce",
-    description:
-      "A product-first storefront for genuine irons, blenders, and kettles — structured so shoppers can compare, trust, and buy without friction.",
-    outcome: "Catalogue UX, product credibility, and a storefront built to convert walk-in demand online.",
-    href: "https://raohomeappliances.com/",
-    tech: ["E-commerce", "Product UX", "SEO"],
   },
   {
     slug: "tikmove",
@@ -332,17 +265,6 @@ export const projects: Project[] = [
     href: "https://www.tikmove.com/",
     tech: ["React", "Landing Systems", "Performance"],
     homeLabel: "TikMove",
-  },
-  {
-    slug: "deep-clean",
-    title: "Deep Cleaning Service",
-    client: "Home & office cleaning",
-    category: "Web Development",
-    description:
-      "A local-services site for residential and commercial deep cleaning — packages, coverage, and WhatsApp booking in one clean flow.",
-    outcome: "Local SEO foundation, package clarity, and a mobile booking path.",
-    href: "https://deepcleaningservice.online/",
-    tech: ["Local SEO", "WhatsApp", "Responsive UI"],
   },
   {
     slug: "patroc",
@@ -423,17 +345,6 @@ export const projects: Project[] = [
     tech: ["WordPress", "Local SEO", "Lead Capture"],
   },
   {
-    slug: "dale",
-    title: "Dale Cleaners",
-    client: "Dry cleaning & laundry",
-    category: "Web Development",
-    description:
-      "A neighbourhood dry-cleaner site — services, hours, and a mobile-friendly path to drop-off or pickup enquiries.",
-    outcome: "Local SEO and a simple service menu for a long-running cleaner.",
-    href: "https://dalecleaners.com/",
-    tech: ["Local SEO", "Service UX", "WhatsApp"],
-  },
-  {
     slug: "hammad",
     title: "Hammad Trade Store",
     client: "General merchandise retail",
@@ -449,10 +360,12 @@ export const projects: Project[] = [
 export const agentAutomation = {
   eyebrow: "AI agents",
   title: "Any digital workflow, automated with AI agents.",
-  body: "I can convert any digital workflow into automation through AI agents — Meta ads, Google ads, web development, social media marketing, video generation, and any other digital work your team repeats on a screen. I map the workflow, build the agents, and connect them to your existing tools, with human review where it matters.",
+  body: "I can convert any digital workflow into automation through AI agents — Meta ads, Google ads, LinkedIn ads, TikTok ads, web development, social media marketing, video generation, and any other digital work your team repeats on a screen. I map the workflow, build the agents, and connect them to your existing tools, with human review where it matters.",
   areas: [
     "Meta ads",
     "Google ads",
+    "LinkedIn ads",
+    "TikTok ads",
     "Web development",
     "Social media marketing",
     "Video generation",
@@ -471,9 +384,9 @@ export const homeServices = [
     slug: "ai",
     title: "AI agents & workflow automation",
     summary:
-      "Any digital workflow can be turned into automation with AI agents — Meta and Google ads, web development, social media marketing, video generation, lead follow-up, CRM, support, and internal tools, wired into the stack you already use.",
+      "Any digital workflow can be turned into automation with AI agents — Meta, Google, LinkedIn and TikTok ads campaigns, web development, social media marketing, video generation, lead follow-up, CRM, support, and internal tools, wired into the stack you already use.",
     points: [
-      "Meta ads and Google ads workflows run by AI agents, with approvals",
+      "Meta, Google, LinkedIn and TikTok ads campaigns automated by AI agents, with approvals",
       "Social media marketing: planning, drafting, and scheduling pipelines",
       "AI video generation: product explainers and brand films",
       "Map the workflow, then automate it end-to-end with AI agents",
@@ -699,13 +612,6 @@ export const testimonials = [
     name: "M. Inzimam Sajid",
     role: "Founder, Inzimation Edu",
     href: "https://www.inzimationedu.com/",
-  },
-  {
-    quote:
-      "Our Quranic education website needed class scheduling, fee management, and WhatsApp integration. Muhammad delivered everything flawlessly. The site is beautiful, fast, and our enrolment increased 40% after launch.",
-    name: "Muhammad Kifayat Ullah",
-    role: "Founder, Learn Quran With Kafayat",
-    href: "https://learnquranwithkafayat.com/",
   },
 ] as const;
 

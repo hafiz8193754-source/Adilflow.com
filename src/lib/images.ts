@@ -16,10 +16,6 @@ export const projectSources = {
       { src: "/images/projects/onyx-640.webp", w: 640, h: 400 },
       { src: "/images/projects/onyx-1200.webp", w: 1200, h: 750 },
   ],
-  "ah-solar": [
-      { src: "/images/projects/ah-solar-640.webp", w: 640, h: 400 },
-      { src: "/images/projects/ah-solar-1200.webp", w: 1200, h: 750 },
-  ],
   "aiaunties": [
       { src: "/images/projects/aiaunties-640.webp", w: 640, h: 400 },
       { src: "/images/projects/aiaunties-1200.webp", w: 1200, h: 750 },
@@ -36,14 +32,6 @@ export const projectSources = {
       { src: "/images/projects/birahvis-640.webp", w: 640, h: 400 },
       { src: "/images/projects/birahvis-1200.webp", w: 1200, h: 750 },
   ],
-  "dale": [
-      { src: "/images/projects/dale-640.webp", w: 640, h: 400 },
-      { src: "/images/projects/dale-1200.webp", w: 1200, h: 750 },
-  ],
-  "deep-clean": [
-      { src: "/images/projects/deep-clean-640.webp", w: 640, h: 400 },
-      { src: "/images/projects/deep-clean-1200.webp", w: 1200, h: 750 },
-  ],
   "fiescher": [
       { src: "/images/projects/fiescher-640.webp", w: 640, h: 400 },
       { src: "/images/projects/fiescher-1200.webp", w: 1200, h: 750 },
@@ -55,10 +43,6 @@ export const projectSources = {
   "inzimation": [
       { src: "/images/projects/inzimation-640.webp", w: 640, h: 400 },
       { src: "/images/projects/inzimation-1200.webp", w: 1200, h: 750 },
-  ],
-  "kafayat": [
-      { src: "/images/projects/kafayat-640.webp", w: 640, h: 400 },
-      { src: "/images/projects/kafayat-1200.webp", w: 1200, h: 750 },
   ],
   "nbfashion": [
       { src: "/images/projects/nbfashion-640.webp", w: 640, h: 400 },
@@ -80,10 +64,6 @@ export const projectSources = {
       { src: "/images/projects/ptpc-640.webp", w: 640, h: 400 },
       { src: "/images/projects/ptpc-1200.webp", w: 1200, h: 750 },
   ],
-  "rao": [
-      { src: "/images/projects/rao-640.webp", w: 640, h: 400 },
-      { src: "/images/projects/rao-1200.webp", w: 1200, h: 750 },
-  ],
   "saucedo": [
       { src: "/images/projects/saucedo-640.webp", w: 640, h: 400 },
       { src: "/images/projects/saucedo-1200.webp", w: 1200, h: 750 },
@@ -95,9 +75,5 @@ export const projectSources = {
   "urke": [
       { src: "/images/projects/urke-640.webp", w: 640, h: 400 },
       { src: "/images/projects/urke-1200.webp", w: 1200, h: 750 },
-  ],
-  "willson": [
-      { src: "/images/projects/willson-640.webp", w: 640, h: 400 },
-      { src: "/images/projects/willson-1200.webp", w: 1200, h: 750 },
   ],
 } as const;

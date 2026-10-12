@@ -1,7 +1,6 @@
 import { CtaStrip } from "@/components/cta-strip";
 import { createFileRoute } from "@tanstack/react-router";
 import { Check } from "lucide-react";
-import { LinkedInIcon } from "@/components/icons";
 import { ResponsiveImage } from "@/components/responsive-image";
 import { SiteShell } from "@/components/site-shell";
 import { portraitSources } from "@/lib/images";
@@ -62,15 +61,6 @@ export function AboutPage() {
                 </li>
               ))}
             </ul>
-            <a
-              href={site.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-6 inline-flex min-h-11 items-center gap-2 text-base font-medium underline decoration-fg/30 underline-offset-4"
-            >
-              <LinkedInIcon className="size-4" />
-              View LinkedIn profile
-            </a>
           </div>
         </div>
       </section>

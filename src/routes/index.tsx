@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
     pageHead({
       title: "Hire Muhammad Adil — AI Agents, Web Development & Ads | Get a Quote",
       description:
-        "Muhammad Adil converts any digital workflow into automation with AI agents — Meta & Google ads, web development, social media and video generation for businesses worldwide. Get a quote by email or WhatsApp.",
+        "Muhammad Adil converts any digital workflow into automation with AI agents — Meta, Google, LinkedIn & TikTok ads, web development, social media and video generation for businesses worldwide. Get a quote by email or WhatsApp.",
       path: "/",
     }),
 });
@@ -58,7 +58,8 @@ function Home() {
             </p>
             <p className="mt-4 max-w-xl border-l-2 border-accent pl-4 text-base font-medium leading-relaxed text-on-ink md:text-lg">
               I can convert any digital workflow into automation through AI agents —
-              Meta ads, Google ads, web development, social media marketing, video
+              Meta ads, Google ads, LinkedIn ads and TikTok ads campaigns, web development,
+              social media marketing, video
               generation, and any other digital work your team does today.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

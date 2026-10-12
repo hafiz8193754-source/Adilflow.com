@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { site } from "@/lib/site";
-import { LinkedInIcon } from "@/components/icons";
 
 const explore = [
   { to: "/portfolio" as const, label: "Work" },
@@ -63,17 +62,6 @@ export function SiteFooter() {
                 className="inline-flex min-h-11 items-center text-base text-on-ink hover:text-accent"
               >
                 {site.email}
-              </a>
-            </li>
-            <li>
-              <a
-                href={site.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex min-h-11 items-center gap-2 text-base text-on-ink hover:text-accent"
-              >
-                <LinkedInIcon className="size-4" />
-                LinkedIn
               </a>
             </li>
           </ul>
