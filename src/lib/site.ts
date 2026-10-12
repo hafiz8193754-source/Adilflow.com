@@ -65,6 +65,7 @@ export const marketingResults = [
 ] as const;
 
 export const clientNames = [
+  "ONYX Research",
   "TikMove",
   "Saucedo Pools & Spas",
   "Ferienwohnung Fiescheralp",
@@ -156,6 +157,7 @@ export type Project = {
 };
 
 export const homeProjectOrder = [
+  "onyx",
   "tikmove",
   "saucedo",
   "inzimation",
@@ -165,6 +167,18 @@ export const homeProjectOrder = [
 ] as const;
 
 export const projects: Project[] = [
+  {
+    slug: "onyx",
+    title: "ONYX Research",
+    client: "Research-grade laboratory materials brand, UK & EU",
+    category: "E-commerce",
+    description:
+      "A compliance-first storefront for research-grade laboratory materials — HPLC/LC-MS verification, on-site authenticity code checks, B2B trade accounts, and clear laboratory-research-use-only positioning throughout.",
+    outcome: "Trust-led catalogue, verification, and trade ordering built as one brand system.",
+    href: "https://onyxhealth.net/",
+    tech: ["Custom Web", "E-commerce", "SEO"],
+    homeLabel: "ONYX Research (UK/EU)",
+  },
   {
     slug: "inzimation",
     title: "Inzimation Edu",

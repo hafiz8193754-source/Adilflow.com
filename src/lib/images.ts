@@ -4,6 +4,10 @@ export const portraitSources = [
 ] as const;
 
 export const projectSources = {
+  "onyx": [
+      { src: "/images/projects/onyx-640.webp", w: 640, h: 400 },
+      { src: "/images/projects/onyx-1200.webp", w: 1200, h: 750 },
+  ],
   "ah-solar": [
       { src: "/images/projects/ah-solar-640.webp", w: 640, h: 400 },
       { src: "/images/projects/ah-solar-1200.webp", w: 1200, h: 750 },
