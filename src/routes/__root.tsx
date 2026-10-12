@@ -8,11 +8,11 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Muhammad Adil — AI Agents, Automation, Web & Growth" },
+      { title: "Adilflow — AI Agents, Automation, Web & Growth" },
       {
         name: "description",
         content:
-          "Muhammad Adil builds fast, high-converting websites, AI automation and SEO & paid-media growth systems for businesses worldwide. Get a quote by email or WhatsApp.",
+          "Adilflow builds fast, high-converting websites, AI automation and SEO & paid-media growth systems for businesses worldwide. Get a quote by email or WhatsApp.",
       },
       { name: "theme-color", content: "#070B14" },
       { name: "author", content: "Muhammad Adil" },
@@ -20,6 +20,9 @@ export const Route = createRootRoute({
     links: [
       { rel: "icon", href: "/favicon.ico", sizes: "any" },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png" },
+      { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16.png" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
       {
         rel: "preload",
         href: "/fonts/instrument-serif-400.woff2",

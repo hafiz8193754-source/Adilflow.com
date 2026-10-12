@@ -23,9 +23,9 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () =>
     pageHead({
-      title: "Hire a Web Developer & AI Automation Expert — Contact Muhammad Adil | Get a Quote",
+      title: "Hire a Web Developer & AI Automation Expert — Contact Adilflow | Get a Quote",
       description:
-        "Hire Muhammad Adil for web development, AI agents automation and Meta/Google ads. Send an enquiry, email hello@adilflow.com or WhatsApp +44 7878 268504 for a free quote within 24 hours.",
+        "Hire Adilflow for web development, AI agents automation and Meta/Google ads. Send an enquiry, email hello@adilflow.com or WhatsApp +44 7878 268504 for a free quote within 24 hours.",
       path: "/contact",
     }),
 });

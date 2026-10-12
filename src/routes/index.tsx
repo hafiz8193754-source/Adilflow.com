@@ -27,9 +27,9 @@ export const Route = createFileRoute("/")({
   component: Home,
   head: () =>
     pageHead({
-      title: "Hire Muhammad Adil — AI Agents, Web Development & Ads | Get a Quote",
+      title: "Hire Adilflow — AI Agents, Web Development & Ads | Get a Quote",
       description:
-        "Muhammad Adil converts any digital workflow into automation with AI agents — Meta, Google, LinkedIn & TikTok ads, web development, social media and video generation for businesses worldwide. Get a quote by email or WhatsApp.",
+        "Adilflow converts any digital workflow into automation with AI agents — Meta, Google, LinkedIn & TikTok ads, web development, social media and video generation for businesses worldwide. Get a quote by email or WhatsApp.",
       path: "/",
     }),
 });
@@ -52,7 +52,7 @@ function Home() {
               <em className="text-accent italic">engineered as one system.</em>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-on-ink-muted md:text-lg">
-              I'm Muhammad Adil. I design, build and scale
+              I'm Muhammad Adil, founder of Adilflow. I design, build and scale
               high-converting websites, AI workflows and SEO & paid-media funnels
               for businesses in the US, UK, Europe and the Gulf — one accountable
               partner instead of three vendors.

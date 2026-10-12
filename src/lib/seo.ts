@@ -27,7 +27,7 @@ export function pageHead({
       { property: "og:description", content: description },
       { property: "og:url", content: url },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Muhammad Adil" },
+      { property: "og:site_name", content: "Adilflow" },
       { property: "og:image", content: SHARE_IMAGE },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
@@ -41,7 +41,7 @@ export function pageHead({
 export const professionalServiceJson = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Muhammad Adil",
+  name: "Adilflow",
   url: `${ORIGIN}/`,
   image: `${ORIGIN}/images/adil-260.webp`,
   telephone: site.phoneTel,
@@ -54,7 +54,7 @@ export const professionalServiceJson = {
   areaServed: ["Worldwide", "US", "UK", "EU", "Gulf"],
   sameAs: [site.whatsappBase],
   description:
-    "Hire Muhammad Adil for web development, AI agents automation, SEO and Meta/Google ads. Contact by email or WhatsApp for a quote.",
+    "Hire Adilflow for web development, AI agents automation, SEO and Meta/Google ads. Contact by email or WhatsApp for a quote.",
   knowsAbout: ["Web development", "AI agents automation", "Meta ads", "Google ads", "LinkedIn ads", "TikTok ads", "SEO", "AI video generation"],
   contactPoint: [
     {
@@ -72,9 +72,9 @@ export const professionalServiceJson = {
 export const contactPageJson = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Contact Muhammad Adil — Get a Quote",
+  name: "Contact Adilflow — Get a Quote",
   url: `${ORIGIN}/contact`,
-  about: { "@type": "ProfessionalService", name: "Muhammad Adil", email: site.email, telephone: site.phoneTel },
+  about: { "@type": "ProfessionalService", name: "Adilflow", email: site.email, telephone: site.phoneTel },
 };
 
 export function faqPageJson(faqs: readonly { q: string; a: string }[]) {

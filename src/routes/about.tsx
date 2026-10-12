@@ -11,9 +11,9 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () =>
     pageHead({
-      title: "About Muhammad Adil",
+      title: "About Muhammad Adil, founder of Adilflow",
       description:
-        "Muhammad Adil — full-stack development, AI automation, and growth since 2019, working with clients worldwide. Contact by email or WhatsApp to hire.",
+        "Muhammad Adil, founder of Adilflow — full-stack development, AI automation, and growth since 2019, working with clients worldwide. Contact by email or WhatsApp to hire.",
       path: "/about",
     }),
 });

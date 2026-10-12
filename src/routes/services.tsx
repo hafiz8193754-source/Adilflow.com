@@ -12,9 +12,9 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () =>
     pageHead({
-      title: "Services — Web, AI, SEO & Paid Media | Muhammad Adil",
+      title: "Services — Web, AI, SEO & Paid Media | Adilflow",
       description:
-        "Full-stack web development, AI agents that automate any digital workflow — Meta, Google, LinkedIn and TikTok ads campaigns, web development, social media marketing, and video generation — from Muhammad Adil. One partner for the site, the workflow, and the growth. Get a quote today.",
+        "Full-stack web development, AI agents that automate any digital workflow — Meta, Google, LinkedIn and TikTok ads campaigns, web development, social media marketing, and video generation — from Adilflow. One partner for the site, the workflow, and the growth. Get a quote today.",
       path: "/services",
     }),
 });

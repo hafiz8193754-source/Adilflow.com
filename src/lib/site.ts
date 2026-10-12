@@ -1,5 +1,5 @@
 export const site = {
-  name: "Muhammad Adil",
+  name: "Adilflow",
   person: "Muhammad Adil",
   role: "Full Stack Developer, AI Automation Specialist & Digital Marketer",
   shortRole: "Full-stack developer · AI automation · Growth",

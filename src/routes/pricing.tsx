@@ -11,7 +11,7 @@ export const Route = createFileRoute("/pricing")({
   component: PricingPage,
   head: () =>
     pageHead({
-      title: "Pricing — Web Development, Social Media Marketing & AI Automation | Muhammad Adil",
+      title: "Pricing — Web Development, Social Media Marketing & AI Automation | Adilflow",
       description:
         "Custom quotes for web development, social media marketing and AI automation. Pricing is agreed after a short conversation and varies by country, scope and market.",
       path: "/pricing",
