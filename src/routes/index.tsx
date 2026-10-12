@@ -20,6 +20,7 @@ import {
   process,
   projects,
   site,
+  testimonials,
 } from "@/lib/site";
 
 export const Route = createFileRoute("/")({
@@ -202,6 +203,31 @@ function Home() {
                 <h3 className="mt-3 text-base font-medium text-on-ink">{item.label}</h3>
                 <p className="mt-2 text-base text-on-ink-muted">{item.note}</p>
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-cream py-20 text-fg md:py-28">
+        <div className="site-wrap">
+          <h2 className="font-display text-4xl md:text-5xl">What partners say</h2>
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {testimonials.map((item) => (
+              <figure key={item.name} className="flex flex-col rounded-2xl border border-line bg-card p-6">
+                <blockquote className="flex-1 text-base leading-relaxed">“{item.quote}”</blockquote>
+                <figcaption className="mt-6 border-t border-line pt-4">
+                  <p className="font-medium">{item.name}</p>
+                  <p className="text-sm text-muted">{item.role}</p>
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-1 inline-flex min-h-11 items-center text-base underline decoration-fg/30 underline-offset-4"
+                  >
+                    Visit website
+                  </a>
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>

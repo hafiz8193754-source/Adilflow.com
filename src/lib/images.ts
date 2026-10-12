@@ -1,6 +1,8 @@
 /** Generated image widths — real pixels, never upscaled. */
 export const portraitSources = [
   { src: "/images/adil-260.webp", w: 260, h: 285 },
+  { src: "/images/adil-480.webp", w: 480, h: 527 },
+  { src: "/images/adil-720.webp", w: 720, h: 790 },
 ] as const;
 
 export const projectSources = {

@@ -645,6 +645,30 @@ export const beyond = [
   },
 ] as const;
 
+export const testimonials = [
+  {
+    quote:
+      "Muhammad built our entire mathematics tutoring platform from scratch. The student progress tracking, class scheduling, and responsive design exceeded our expectations. Professional, timely, and technically brilliant.",
+    name: "M. Inzimam Sajid",
+    role: "Founder, Inzimation Edu",
+    href: "https://www.inzimationedu.com/",
+  },
+  {
+    quote:
+      "Our Quranic education website needed class scheduling, fee management, and WhatsApp integration. Muhammad delivered everything flawlessly. The site is beautiful, fast, and our enrolment increased 40% after launch.",
+    name: "Muhammad Kifayat Ullah",
+    role: "Founder, Learn Quran With Kafayat",
+    href: "https://learnquranwithkafayat.com/",
+  },
+  {
+    quote:
+      "Muhammad delivered a clean, conversion-ready payments website with clear product journeys and trust-first UX. Sharp communication, quick iterations, and a partner who understood how fintech should look and feel.",
+    name: "Product team",
+    role: "MetaX Payments",
+    href: "https://www.metaxpayments.com/",
+  },
+] as const;
+
 export const faqs = [
   {
     q: "How long does a project take?",
