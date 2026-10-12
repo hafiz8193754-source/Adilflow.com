@@ -1,4 +1,12 @@
-import { useState, type FormEvent, type ReactNode } from "react";
+import {
+  cloneElement,
+  isValidElement,
+  useEffect,
+  useRef,
+  useState,
+  type FormEvent,
+  type ReactElement,
+} from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { CheckCircle2 } from "lucide-react";
 import { LinkedInIcon } from "@/components/icons";
@@ -38,6 +46,24 @@ function ContactPage() {
   const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
   const [serverError, setServerError] = useState("");
   const [website, setWebsite] = useState("");
+  const [focusTick, setFocusTick] = useState(0);
+  const formRef = useRef<HTMLFormElement>(null);
+  const successRef = useRef<HTMLDivElement>(null);
+
+  // Move focus to the first invalid field (or the server error) after a failed submit.
+  useEffect(() => {
+    if (!focusTick) return;
+    const form = formRef.current;
+    if (!form) return;
+    const target =
+      form.querySelector<HTMLElement>('[aria-invalid="true"]') ??
+      form.querySelector<HTMLElement>("#contact-server-error");
+    target?.focus();
+  }, [focusTick]);
+
+  useEffect(() => {
+    if (sent) successRef.current?.focus();
+  }, [sent]);
 
   const whatsappHref = `${site.whatsappBase}?text=${encodeURIComponent(
     [
@@ -57,7 +83,10 @@ function ContactPage() {
       next.email = "A valid email is required.";
     if (form.message.trim().length < 12) next.message = "Tell me a little more about the project.";
     setErrors(next);
-    if (Object.keys(next).length) return;
+    if (Object.keys(next).length) {
+      setFocusTick((t) => t + 1);
+      return;
+    }
 
     setStatus("sending");
     setServerError("");
@@ -71,9 +100,11 @@ function ContactPage() {
       if (result.fieldErrors) setErrors(result.fieldErrors);
       setServerError(result.error);
       setStatus("error");
+      setFocusTick((t) => t + 1);
     } catch {
       setServerError("Couldn't send your message. Please try again or use WhatsApp.");
       setStatus("error");
+      setFocusTick((t) => t + 1);
     }
   }
 
@@ -99,7 +130,13 @@ function ContactPage() {
             className="rounded-2xl border border-line bg-card p-6 md:p-8 lg:col-span-7"
           >
             {sent ? (
-              <div role="status" aria-live="polite">
+              <div
+                ref={successRef}
+                tabIndex={-1}
+                role="status"
+                aria-live="polite"
+                className="outline-none"
+              >
                 <CheckCircle2 className="size-8 text-accent-ink" aria-hidden="true" />
                 <h2 className="mt-4 font-display text-3xl">Thanks — message sent</h2>
                 <p className="mt-2 text-base text-muted">
@@ -124,6 +161,7 @@ function ContactPage() {
               </div>
             ) : (
               <form
+                ref={formRef}
                 onSubmit={onSubmit}
                 noValidate
                 className="relative space-y-4"
@@ -144,7 +182,7 @@ function ContactPage() {
                     />
                   </label>
                 </div>
-                <Field label="Your name" error={errors.name} required>
+                <Field id="contact-name" label="Your name" error={errors.name} required>
                   <input
                     className={fieldClass}
                     value={form.name}
@@ -153,7 +191,7 @@ function ContactPage() {
                     required
                   />
                 </Field>
-                <Field label="Email" error={errors.email} required>
+                <Field id="contact-email" label="Email" error={errors.email} required>
                   <input
                     className={fieldClass}
                     type="email"
@@ -163,7 +201,7 @@ function ContactPage() {
                     required
                   />
                 </Field>
-                <Field label="WhatsApp / phone (optional)" error={errors.phone}>
+                <Field id="contact-phone" label="WhatsApp / phone (optional)" error={errors.phone}>
                   <input
                     className={fieldClass}
                     type="tel"
@@ -174,7 +212,7 @@ function ContactPage() {
                     placeholder="+44…"
                   />
                 </Field>
-                <Field label="Subject">
+                <Field id="contact-subject" label="Subject">
                   <select
                     className={fieldClass}
                     value={form.subject}
@@ -185,7 +223,7 @@ function ContactPage() {
                     ))}
                   </select>
                 </Field>
-                <Field label="Message" error={errors.message} required>
+                <Field id="contact-message" label="Message" error={errors.message} required>
                   <textarea
                     className={cn(fieldClass, "min-h-32 py-3")}
                     value={form.message}
@@ -193,7 +231,7 @@ function ContactPage() {
                     required
                   />
                 </Field>
-                <Field label="Budget">
+                <Field id="contact-budget" label="Budget">
                   <select
                     className={fieldClass}
                     value={form.budget}
@@ -206,6 +244,8 @@ function ContactPage() {
                 </Field>
                 {status === "error" && serverError ? (
                   <p
+                    id="contact-server-error"
+                    tabIndex={-1}
                     role="alert"
                     className="rounded-xl border border-danger px-3.5 py-3 text-sm text-danger"
                   >
@@ -263,29 +303,46 @@ function ContactPage() {
 }
 
 function Field({
+  id,
   label,
   error,
   required,
   children,
 }: {
+  id: string;
   label: string;
   error?: string;
   required?: boolean;
-  children: ReactNode;
+  children: ReactElement<Record<string, unknown>>;
 }) {
+  const errorId = `${id}-error`;
+  const control = isValidElement(children)
+    ? cloneElement(children, {
+        id,
+        name: id.replace(/^contact-/, ""),
+        "aria-invalid": error ? true : undefined,
+        "aria-describedby": error ? errorId : undefined,
+        "aria-required": required ? true : undefined,
+      })
+    : children;
   return (
-    <label className="block">
-      <span className="mb-1.5 block text-sm font-medium">
+    <div>
+      <label htmlFor={id} className="mb-1.5 block text-sm font-medium">
         {label}
-        {required ? <span className="text-accent-ink"> *</span> : null}
-      </span>
-      {children}
+        {required ? (
+          <span className="text-accent-ink" aria-hidden="true">
+            {" "}
+            *
+          </span>
+        ) : null}
+      </label>
+      {control}
       {error ? (
-        <span role="alert" className="mt-1 block text-sm text-danger">
+        <p id={errorId} className="mt-1 block text-sm text-danger">
           {error}
-        </span>
+        </p>
       ) : null}
-    </label>
+    </div>
   );
 }
 

@@ -1,9 +1,5 @@
-import {
-  createRootRoute,
-  HeadContent,
-  Outlet,
-  Scripts,
-} from "@tanstack/react-router";
+import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
+import { Analytics } from "@vercel/analytics/react";
 import { NotFoundPage } from "@/components/not-found";
 import appCss from "../styles.css?url";
 
@@ -53,6 +49,7 @@ function RootDocument() {
       </head>
       <body className="min-h-screen bg-ink font-sans text-base text-on-ink">
         <Outlet />
+        <Analytics />
         <Scripts />
       </body>
     </html>
