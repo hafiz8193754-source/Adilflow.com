@@ -19,7 +19,47 @@ export const nav = [
   { hash: "process", label: "Process" },
   { hash: "results", label: "Results" },
   { hash: "videos", label: "AI Videos" },
+  { hash: "pricing", label: "Pricing" },
   { hash: "faq", label: "FAQ" },
+] as const;
+
+export const pricingServices = [
+  {
+    name: "Web Development",
+    audience: "Fast, high-converting websites, stores and web apps.",
+    featured: false,
+    features: [
+      "Custom design and full-stack build",
+      "E-commerce, booking and lead-gen sites",
+      "SEO-ready, mobile-first, fast",
+      "Integrations: WhatsApp, payments, APIs",
+      "Handover plus post-launch support",
+    ],
+  },
+  {
+    name: "Social Media Marketing",
+    audience: "Organic content and paid campaigns that bring customers.",
+    featured: false,
+    features: [
+      "Meta, Google, TikTok and LinkedIn ads",
+      "Content planning and posting",
+      "Audience, creative and funnel strategy",
+      "Monthly reporting and optimisation",
+      "Ad spend billed separately",
+    ],
+  },
+  {
+    name: "AI Automation",
+    audience: "Any digital workflow converted into automation with AI agents.",
+    featured: true,
+    features: [
+      "Custom AI agents for ops, leads and support",
+      "Workflow automation across your tools and CRM",
+      "AI-run ad management and reporting",
+      "AI video generation for ads and social",
+      "Ongoing monitoring and iteration",
+    ],
+  },
 ] as const;
 
 export const heroStats = [
@@ -622,7 +662,7 @@ export const faqs = [
   },
   {
     q: "How are projects quoted?",
-    a: "Every engagement is quoted to the brief after you send an enquiry by email, WhatsApp or the contact form — websites, AI agent automation, video generation, and monthly growth partnerships alike. You get a written scope and quote before any work starts. One-time projects and monthly retainers are both available; ad spend is billed separately.",
+    a: "Pricing is negotiated per project and differs country-wise. After a short conversation by email, WhatsApp or the contact form, I quote based on your country and market, the scope, and timelines — for web development, social media marketing and AI automation alike. You get a written scope and quote to agree before any work starts. One-time projects and monthly retainers are both available; ad spend is billed separately.",
   },
   {
     q: "What payment methods do you accept?",

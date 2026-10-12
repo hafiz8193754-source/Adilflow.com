@@ -2,6 +2,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
 import { AiVideos } from "@/components/ai-videos";
+import { PricingSection } from "@/components/pricing-cards";
 import { ProjectCard } from "@/components/project-card";
 import { ResponsiveImage } from "@/components/responsive-image";
 import { SiteShell } from "@/components/site-shell";
@@ -231,6 +232,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <PricingSection />
 
       <section id="faq" className="dark-surface scroll-mt-20 bg-ink py-20 text-on-ink md:py-28">
         <div className="site-wrap max-w-3xl">

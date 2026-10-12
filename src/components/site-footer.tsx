@@ -5,6 +5,7 @@ const explore = [
   { to: "/portfolio" as const, label: "Work" },
   { to: "/services" as const, label: "Services" },
   { to: "/about" as const, label: "About" },
+  { to: "/pricing" as const, label: "Pricing" },
   { to: "/contact" as const, label: "Contact" },
 ];
 
