@@ -26,7 +26,7 @@ export const nav = [
 
 export const heroStats = [
   { value: "40+", label: "Live websites shipped" },
-  { value: "40%", label: "Enrolment lift for Learn Quran With Kifayat" },
+  { value: "40%", label: "Enrolment lift for Learn Quran With Kafayat" },
   { value: "Up to 3×", label: "Example paid-media ROAS" },
   { value: "Up to 4×", label: "Example organic traffic lift" },
 ] as const;
@@ -45,7 +45,7 @@ export const marketingResults = [
   {
     value: "40%",
     label: "Enrolment lift",
-    note: "Learn Quran With Kifayat, reported by the founder after launch",
+    note: "Learn Quran With Kafayat, reported by the founder after launch",
   },
   {
     value: "Up to 60%",
@@ -84,7 +84,7 @@ export const caseStudies = [
     slug: "education",
     sector: "Education",
     title: "A tutoring brand that finally converts visitors into enrolled students",
-    client: "Learn Quran With Kifayat",
+    client: "Learn Quran With Kafayat",
     channels: ["Web platform", "WhatsApp", "Local SEO"],
     body: "Class scheduling, fee management, and WhatsApp were rebuilt as one enrolment path — not three disconnected pages. Families could understand the offer and book without a phone tag.",
     metrics: [
@@ -248,7 +248,7 @@ export const projects: Project[] = [
   },
   {
     slug: "kafayat",
-    title: "Learn Quran With Kifayat",
+    title: "Learn Quran With Kafayat",
     client: "Quranic education",
     category: "Web Development",
     description:
@@ -649,7 +649,7 @@ export const testimonials = [
     quote:
       "Our Quranic education website needed class scheduling, fee management, and WhatsApp integration. Muhammad delivered everything flawlessly. The site is beautiful, fast, and our enrolment increased 40% after launch.",
     name: "Muhammad Kifayat Ullah",
-    role: "Founder, Learn Quran With Kifayat",
+    role: "Founder, Learn Quran With Kafayat",
     href: "https://learnquranwithkafayat.com/",
   },
 ] as const;
