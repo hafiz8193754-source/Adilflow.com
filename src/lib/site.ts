@@ -250,6 +250,17 @@ export const projects: Project[] = [
     homeLabel: "Saucedo Pools & Spas (USA)",
   },
   {
+    slug: "peptide-dosage-info",
+    title: "Peptide Dosage Info",
+    client: "Research reference site",
+    category: "Web Development",
+    description:
+      "An educational, research-only peptide reference — searchable by class, with strengths, unit conversions, and recorded side effects. Not medical advice.",
+    outcome: "Searchable, category-led reference UX with research-only framing throughout.",
+    href: "https://peptidedosageinfo.com/",
+    tech: ["React", "Vercel", "Search"],
+  },
+  {
     slug: "nbfashion",
     title: "NB Fashion",
     client: "Wedding & occasion wear",

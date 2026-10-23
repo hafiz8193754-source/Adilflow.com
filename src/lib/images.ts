@@ -6,6 +6,10 @@ export const portraitSources = [
 ] as const;
 
 export const projectSources = {
+  "peptide-dosage-info": [
+      { src: "/images/projects/peptide-dosage-info-640.webp", w: 640, h: 400 },
+      { src: "/images/projects/peptide-dosage-info-1200.webp", w: 1200, h: 750 },
+  ],
   "metax": [
       { src: "/images/projects/metax-640.webp", w: 640, h: 400 },
       { src: "/images/projects/metax-1200.webp", w: 1200, h: 750 },
