@@ -14,6 +14,7 @@ export const site = {
 } as const;
 
 export const nav = [
+  { hash: "featured", label: "Featured" },
   { hash: "work", label: "Work" },
   { hash: "services", label: "Services" },
   { hash: "process", label: "Process" },
@@ -141,6 +142,7 @@ export const caseStudies = [
 ] as const;
 
 export const tech = [
+  "Next.js",
   "React",
   "Laravel",
   "Node.js",
@@ -151,11 +153,13 @@ export const tech = [
   "Tailwind",
   "Bootstrap",
   "WordPress",
+  "Elementor",
+  "Divi",
   "MySQL",
   "MongoDB",
   "ChatGPT API",
-  "Make.com",
-  "Zapier",
+  "AI agents",
+  "AI video",
   "Google Ads",
   "Meta Ads",
   "TikTok Ads",
@@ -176,6 +180,123 @@ export type Project = {
   tech: string[];
   homeLabel?: string;
 };
+
+/** Experience facts shown on the homepage and About page. */
+export const experience = {
+  websitesSince: "2022",
+  aiProjects: "100+",
+  roles: [
+    {
+      org: "MetaX Payments",
+      location: "London · remote",
+      period: "2022 – now",
+    },
+  ],
+  stack: [
+    "Next.js",
+    "React",
+    "Node.js",
+    "Laravel / PHP",
+    "Tailwind",
+    "MySQL / MongoDB",
+    "WordPress (Elementor, Divi)",
+    "AI agents & automation",
+    "AI video",
+  ],
+} as const;
+
+export type FeaturedProject = {
+  slug: string;
+  title: string;
+  domain: string;
+  /** null when the site could not be reached at the time of writing. */
+  href: string | null;
+  /** Key in projectSources; omitted when no live screenshot exists. */
+  image?: string;
+  recent: boolean;
+  overview: string;
+  role: string;
+  stack: readonly string[];
+  features: readonly string[];
+  note?: string;
+};
+
+/**
+ * Featured case studies. Every overview and feature below describes only what is
+ * visible on the live site (checked October 2026). Screenshots are real captures.
+ */
+export const featuredProjects: readonly FeaturedProject[] = [
+  {
+    slug: "ptpc-com",
+    title: "PTPC — Pakistan Tourism Promotion Council",
+    domain: "ptpctourism.com",
+    href: "https://ptpctourism.com/",
+    image: "featured-ptpc",
+    recent: true,
+    overview:
+      "A large tourism portal for Pakistan: destinations, cities, religious and heritage sites, transport, food and culture, organised into fourteen travel categories with trip-planning tools built in.",
+    role: "Design and front-end build",
+    stack: ["React", "Vite", "Framer Motion", "Schema.org SEO"],
+    features: [
+      "Mega-menu across 14 travel categories plus city and place guides",
+      "Interactive region map of Pakistan with highlights per region",
+      "“Build your own itinerary” tool: pick interests and days, get a route, send it on WhatsApp",
+      "Sample 3, 7 and 14-day itineraries and e-Visa guidance",
+      "AI trip assistant, dark mode, news & events, hero slider",
+    ],
+  },
+  {
+    slug: "nadgo",
+    title: "NadGo",
+    domain: "nad-go.com",
+    href: "https://www.nad-go.com/",
+    image: "featured-nadgo",
+    recent: true,
+    overview:
+      "A UK e-commerce store for a NAD+ pen brand with separate retail (B2C) and wholesale (B2B) customer journeys, a research journal and full policy pages.",
+    role: "Design and WordPress / WooCommerce build",
+    stack: ["WordPress", "Elementor Pro", "WooCommerce", "B2BKing"],
+    features: [
+      "WooCommerce product range with strengths, sale pricing and cart",
+      "Separate B2B and B2C logins with a wholesale application",
+      "Product comparison table and downloadable certificates",
+      "Age & eligibility gate and GDPR cookie consent (accept / reject / manage)",
+      "Research journal, FAQ and Instagram feed",
+    ],
+  },
+  {
+    slug: "onyx-featured",
+    title: "ONYX Research",
+    domain: "onyxhealth.net",
+    href: "https://onyxhealth.net/",
+    image: "featured-onyx",
+    recent: false,
+    overview:
+      "A catalogue and ordering site for a supplier of research-use-only (RUO) laboratory materials, built for both researchers and trade (B2B) buyers.",
+    role: "Design and front-end build",
+    stack: ["React", "Vite", "Google Tag Manager / GA4"],
+    features: [
+      "Language selector with 14 languages",
+      "Research-use eligibility gate and RUO notices across the site",
+      "Product catalogue with bestseller / latest / specials tabs, wishlist and cart",
+      "Trader (B2B) login and wholesale supply application",
+      "“Check Code” product authenticity lookup and quality & testing pages",
+    ],
+  },
+  {
+    slug: "ptpc-pk",
+    title: "PTPC Tourism — Pakistan domain",
+    domain: "pptctourism.pk",
+    href: null,
+    recent: true,
+    overview:
+      "The .pk domain for the PTPC tourism project.",
+    role: "Design and build",
+    stack: [],
+    features: [],
+    note: "This domain could not be reached when this page was last updated, so there is no screenshot or feature list yet.",
+  },
+];
 
 export const homeProjectOrder = [
   "onyx",
@@ -444,7 +565,7 @@ export const homeServices = [
       "Lead capture, qualification, and follow-up automation",
       "CRM updates, reporting, and operations workflows",
       "Customer support assistants and content pipelines",
-      "ChatGPT API, Make.com, Zapier, and custom integrations",
+      "ChatGPT API, custom AI agents, and API integrations",
       "Human review steps and handover your team can run",
     ],
   },
@@ -454,9 +575,9 @@ export const homeServices = [
     summary:
       "Custom websites and web apps that are fast, responsive, and built to convert — from first sketch to production.",
     points: [
-      "React.js frontends with precise, accessible UI",
+      "Next.js & React.js frontends with precise, accessible UI",
       "Laravel & Node.js backends, APIs, and auth",
-      "WordPress when the brief calls for it",
+      "WordPress (Elementor, Divi) when the brief calls for it",
       "Performance, SEO foundations, and analytics",
       "Ongoing iteration after launch",
     ],
@@ -551,19 +672,14 @@ export const journey = [
     body: "Social media management for a first local business — the first live account, the first results.",
   },
   {
-    year: "2021",
-    title: "Web development",
-    body: "HTML, CSS, WordPress. The first ten responsive websites. Design stopped being a file and became a product.",
-  },
-  {
     year: "2022",
-    title: "Full-stack range",
-    body: "React.js, Laravel, and Node.js. Started shipping complete applications, not just pages.",
+    title: "Websites & MetaX Payments",
+    body: "Started building websites — WordPress first, then React.js, Laravel and Node.js. Joined MetaX Payments (London, remote), where I have worked from 2022 to now.",
   },
   {
     year: "2023",
     title: "AI in production",
-    body: "ChatGPT API, Make.com, Zapier — automation became part of the delivery, not a slide in a deck.",
+    body: "ChatGPT API and custom AI agents — automation became part of the delivery, not a slide in a deck.",
   },
   {
     year: "2024",
@@ -600,19 +716,23 @@ export const skillGroups = [
   {
     label: "Development",
     items: [
+      "Next.js",
       "React.js",
-      "Laravel",
       "Node.js",
+      "Laravel",
       "PHP",
       "JavaScript",
+      "TypeScript",
       "Tailwind",
-      "WordPress",
+      "MySQL",
+      "MongoDB",
+      "WordPress (Elementor, Divi)",
       "HTML/CSS",
     ],
   },
   {
     label: "AI & ops",
-    items: ["ChatGPT API", "Make.com", "Zapier", "Prompt systems", "Workflow design"],
+    items: ["AI agents", "Workflow automation", "ChatGPT API", "AI video generation", "Prompt systems", "Workflow design"],
   },
 ] as const;
 
@@ -695,7 +815,7 @@ export const faqs = [
   },
   {
     q: "What technologies do you use?",
-    a: "React, Laravel, Node.js, PHP, JavaScript, TypeScript, WordPress, Tailwind, MySQL, MongoDB, the ChatGPT API, Make.com, Zapier, and Google, Meta, and TikTok ads — chosen for the brief, not for the sake of a stack.",
+    a: "Next.js, React, Node.js, Laravel, PHP, JavaScript, TypeScript, Tailwind, MySQL, MongoDB, WordPress (Elementor, Divi), the ChatGPT API, custom AI agents and AI video tools, and Google, Meta, and TikTok ads — chosen for the brief, not for the sake of a stack.",
   },
   {
     q: "Do you work remotely across time zones?",

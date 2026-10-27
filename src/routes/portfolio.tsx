@@ -1,6 +1,7 @@
 import { CtaStrip } from "@/components/cta-strip";
 import { useMemo, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { FeaturedProjects } from "@/components/featured-projects";
 import { ProjectCard } from "@/components/project-card";
 import { SiteShell } from "@/components/site-shell";
 import { pageHead } from "@/lib/seo";
@@ -42,8 +43,13 @@ function PortfolioPage() {
         </div>
       </section>
 
-      <section className="bg-cream py-14 text-fg md:py-20">
+      <FeaturedProjects showFacts={false} />
+
+      <section className="border-t border-line bg-cream py-14 text-fg md:py-20" aria-labelledby="all-projects-heading">
         <div className="site-wrap">
+          <h2 id="all-projects-heading" className="mb-6 font-display text-4xl leading-tight">
+            All projects
+          </h2>
           <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter projects">
             {filters.map((item) => (
               <button
