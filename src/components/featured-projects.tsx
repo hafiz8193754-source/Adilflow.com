@@ -17,9 +17,8 @@ function FeaturedCard({ project, headingLevel }: { project: FeaturedProject; hea
             className="h-full w-full object-cover object-top"
           />
         ) : (
-          <div className="flex h-full w-full flex-col items-center justify-center gap-2 p-6 text-center">
+          <div className="flex h-full w-full items-center justify-center p-6 text-center">
             <p className="font-display text-3xl">{project.domain}</p>
-            <p className="text-sm text-muted">No screenshot — site unreachable at last check</p>
           </div>
         )}
       </div>

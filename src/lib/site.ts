@@ -1,8 +1,8 @@
 export const site = {
   name: "Adilflow",
   person: "Muhammad Adil",
-  role: "Full Stack Developer, AI Automation Specialist & Digital Marketer",
-  shortRole: "Full-stack developer · AI automation · Growth",
+  role: "Full Stack Developer (Custom & WordPress), AI Automation Specialist & Digital Marketer",
+  shortRole: "Full Stack Developer (Custom & WordPress) · AI automation · Growth",
   email: "hello@adilflow.com",
   phoneDisplay: "+44 7878 268504",
   phoneTel: "+447878268504",
@@ -235,7 +235,7 @@ export const featuredProjects: readonly FeaturedProject[] = [
     recent: true,
     overview:
       "A large tourism portal for Pakistan: destinations, cities, religious and heritage sites, transport, food and culture, organised into fourteen travel categories with trip-planning tools built in.",
-    role: "Design and front-end build",
+    role: "Full Stack Developer (Custom & WordPress)",
     stack: ["React", "Vite", "Framer Motion", "Schema.org SEO"],
     features: [
       "Mega-menu across 14 travel categories plus city and place guides",
@@ -254,7 +254,7 @@ export const featuredProjects: readonly FeaturedProject[] = [
     recent: true,
     overview:
       "A UK e-commerce store for a NAD+ pen brand with separate retail (B2C) and wholesale (B2B) customer journeys, a research journal and full policy pages.",
-    role: "Design and WordPress / WooCommerce build",
+    role: "Full Stack Developer (Custom & WordPress)",
     stack: ["WordPress", "Elementor Pro", "WooCommerce", "B2BKing"],
     features: [
       "WooCommerce product range with strengths, sale pricing and cart",
@@ -273,7 +273,7 @@ export const featuredProjects: readonly FeaturedProject[] = [
     recent: false,
     overview:
       "A catalogue and ordering site for a supplier of research-use-only (RUO) laboratory materials, built for both researchers and trade (B2B) buyers.",
-    role: "Design and front-end build",
+    role: "Full Stack Developer (Custom & WordPress)",
     stack: ["React", "Vite", "Google Tag Manager / GA4"],
     features: [
       "Language selector with 14 languages",
@@ -282,19 +282,6 @@ export const featuredProjects: readonly FeaturedProject[] = [
       "Trader (B2B) login and wholesale supply application",
       "“Check Code” product authenticity lookup and quality & testing pages",
     ],
-  },
-  {
-    slug: "ptpc-pk",
-    title: "PTPC Tourism — Pakistan domain",
-    domain: "pptctourism.pk",
-    href: null,
-    recent: true,
-    overview:
-      "The .pk domain for the PTPC tourism project.",
-    role: "Design and build",
-    stack: [],
-    features: [],
-    note: "This domain could not be reached when this page was last updated, so there is no screenshot or feature list yet.",
   },
 ];
 

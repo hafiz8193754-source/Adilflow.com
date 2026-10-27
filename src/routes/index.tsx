@@ -94,7 +94,7 @@ function Home() {
                 className="aspect-[260/285] w-full object-cover object-top"
               />
               <p className="absolute inset-x-0 bottom-0 bg-ink px-3 py-3 text-sm leading-snug text-on-ink">
-                Muhammad Adil — Full-stack developer · AI automation · Growth
+                Muhammad Adil — Full Stack Developer (Custom &amp; WordPress) · AI automation · Growth
               </p>
             </div>
           </div>
