@@ -2,6 +2,7 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { FaqList } from "@/components/faq-list";
 import { JsonLd } from "@/components/json-ld";
 import { AiVideos } from "@/components/ai-videos";
+import { FeaturedProjects } from "@/components/featured-projects";
 import { PricingSection } from "@/components/pricing-cards";
 import { ProjectCard } from "@/components/project-card";
 import { ResponsiveImage } from "@/components/responsive-image";
@@ -68,7 +69,7 @@ function Home() {
                 <a href="#contact">Get a quote →</a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="#work">See selected work</a>
+                <a href="#featured">See featured projects</a>
               </Button>
             </div>
             <p className="mt-5 pb-6 text-base md:pb-0">
@@ -93,7 +94,7 @@ function Home() {
                 className="aspect-[260/285] w-full object-cover object-top"
               />
               <p className="absolute inset-x-0 bottom-0 bg-ink px-3 py-3 text-sm leading-snug text-on-ink">
-                Muhammad Adil — Full-stack developer · AI automation · Growth
+                Muhammad Adil — Full Stack Developer (Custom &amp; WordPress) · AI automation · Growth
               </p>
             </div>
           </div>
@@ -124,7 +125,9 @@ function Home() {
         </div>
       </section>
 
-      <section id="work" className="scroll-mt-20 bg-cream py-20 text-fg md:py-28">
+      <FeaturedProjects />
+
+      <section id="work" className="scroll-mt-20 border-t border-line bg-cream py-20 text-fg md:py-28">
         <div className="site-wrap">
           <h2 className="font-display text-4xl leading-tight md:text-5xl">Live products, built to convert.</h2>
           <p className="mt-4 max-w-2xl text-base text-muted">

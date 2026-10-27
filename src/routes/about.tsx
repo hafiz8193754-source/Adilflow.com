@@ -1,6 +1,7 @@
 import { CtaStrip } from "@/components/cta-strip";
 import { createFileRoute } from "@tanstack/react-router";
 import { Check } from "lucide-react";
+import { ExperienceFacts } from "@/components/featured-projects";
 import { ResponsiveImage } from "@/components/responsive-image";
 import { SiteShell } from "@/components/site-shell";
 import { portraitSources } from "@/lib/images";
@@ -13,7 +14,7 @@ export const Route = createFileRoute("/about")({
     pageHead({
       title: "About Muhammad Adil, founder of Adilflow",
       description:
-        "Muhammad Adil, founder of Adilflow — full-stack development, AI automation, and growth since 2019, working with clients worldwide. Contact by email or WhatsApp to hire.",
+        "Muhammad Adil, founder of Adilflow — building websites since 2022, at MetaX Payments (London, remote) since 2022, with 100+ AI projects delivered. Full stack, Next.js and AI automation. Contact by email or WhatsApp to hire.",
       path: "/about",
     }),
 });
@@ -43,16 +44,25 @@ export function AboutPage() {
           </div>
           <div className="md:col-span-8">
             <p className="text-base leading-relaxed text-muted">
-              Results-driven full stack developer and digital marketer, practising since 2019 —
-              multi-platform advertising, AI automation, and conversion-focused campaigns. I
-              combine technical product skills with data-driven marketing to build high-performing
-              digital systems for B2B and B2C teams.
+              Results-driven full stack developer and digital marketer. I started in digital
+              marketing in 2019 and have been building websites since 2022 — multi-platform
+              advertising, AI automation, and conversion-focused campaigns. I combine technical
+              product skills with data-driven marketing to build high-performing digital systems
+              for B2B and B2C teams.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-muted">
+              Since 2022 I have worked with MetaX Payments (London, remote), and I have delivered
+              100+ AI projects — AI agents, workflow automation and AI video. My stack: Next.js,
+              React, Node.js, Laravel/PHP, Tailwind, MySQL/MongoDB and WordPress (Elementor, Divi).
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted">
               Academic achiever with a 3.79 / 4 CGPA and Provincial Debate Champion — analytical
               precision and persuasive communication in the same brief. Fluent in English and Urdu,
               with Arabic reading proficiency. Working with clients worldwide.
             </p>
+            <div className="mt-8">
+              <ExperienceFacts />
+            </div>
             <ul className="mt-6 grid gap-2 sm:grid-cols-2">
               {traits.map((trait) => (
                 <li key={trait} className="flex items-center gap-2 text-base">
