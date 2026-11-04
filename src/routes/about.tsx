@@ -5,16 +5,17 @@ import { ExperienceFacts } from "@/components/featured-projects";
 import { ResponsiveImage } from "@/components/responsive-image";
 import { SiteShell } from "@/components/site-shell";
 import { portraitSources } from "@/lib/images";
-import { pageHead } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
+import { pageHead, personJson } from "@/lib/seo";
 import { awards, beyond, education, journey, site, skillGroups, traits } from "@/lib/site";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () =>
     pageHead({
-      title: "About Muhammad Adil, founder of Adilflow",
+      title: "About Muhammad Adil — Founder of Adilflow",
       description:
-        "Muhammad Adil, founder of Adilflow — building websites since 2022, at MetaX Payments (London, remote) since 2022, with 100+ AI projects delivered. Full stack, Next.js and AI automation. Contact by email or WhatsApp to hire.",
+        "Muhammad Adil is a full-stack developer and AI automation specialist working with clients in the US, UK, Europe and Dubai. Read his story, stack and results.",
       path: "/about",
     }),
 });
@@ -22,10 +23,11 @@ export const Route = createFileRoute("/about")({
 export function AboutPage() {
   return (
     <SiteShell>
+      <JsonLd data={personJson} />
       <section className="dark-surface bg-ink py-16 md:py-20">
         <div className="site-wrap max-w-3xl">
           <p className="text-sm tracking-widest text-accent uppercase">About</p>
-          <h1 className="mt-3 font-display text-5xl text-on-ink md:text-6xl">Muhammad Adil</h1>
+          <h1 className="mt-3 font-display text-5xl text-on-ink md:text-6xl">Muhammad Adil, founder of Adilflow</h1>
           <p className="mt-4 text-base text-on-ink-muted md:text-lg">
             {site.role}. {site.remote}.
           </p>

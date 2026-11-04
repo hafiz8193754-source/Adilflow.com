@@ -11,6 +11,21 @@ export const site = {
   whatsappBase: "https://wa.me/447878268504",
   availability: "Available for new projects",
   remote: "Working with clients worldwide",
+  address: {
+    locality: "Lahore",
+    region: "Punjab",
+    country: "PK",
+    countryName: "Pakistan",
+  },
+  addressLine: "Lahore, Punjab, Pakistan",
+} as const;
+
+export const socials = {
+  facebook: "https://www.facebook.com/profile.php?id=61591856524435",
+  instagram: "https://www.instagram.com/adilflow.co",
+  tiktok: "https://www.tiktok.com/@adilflow600",
+  x: "https://x.com/Ad80971Adil",
+  linkedinPerson: "https://www.linkedin.com/in/muhammad-adil-77248b2ab",
 } as const;
 
 export const nav = [

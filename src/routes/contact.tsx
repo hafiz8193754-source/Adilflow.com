@@ -23,9 +23,9 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () =>
     pageHead({
-      title: "Hire a Web Developer & AI Automation Expert — Contact Adilflow | Get a Quote",
+      title: "Contact Adilflow — Get a Quote",
       description:
-        "Hire Adilflow for web development, AI agents automation and Meta/Google ads. Send an enquiry, email hello@adilflow.com or WhatsApp +44 7878 268504 for a free quote within 24 hours.",
+        "Tell Adilflow about your project. Reply within 24 hours by email (hello@adilflow.com) or WhatsApp (+44 7878 268504).",
       path: "/contact",
     }),
 });
@@ -118,7 +118,7 @@ function ContactPage() {
         <div className="site-wrap max-w-3xl">
           <p className="text-sm tracking-widest text-accent uppercase">Contact</p>
           <h1 className="mt-3 font-display text-5xl text-on-ink md:text-6xl">
-            Let's work together
+            Get a quote for your project
           </h1>
           <p className="mt-4 text-base text-on-ink-muted md:text-lg">
             Have a project in mind? I'd like to hear about it. Remote — working with clients
@@ -288,8 +288,13 @@ function ContactPage() {
               href={`mailto:${site.email}`}
             />
             <div className="rounded-2xl border border-line bg-card p-5">
-              <p className="text-base font-medium">Remote</p>
-              <p className="mt-1 text-base text-accent-ink">{site.remote}</p>
+              <p className="text-base font-medium">Location</p>
+              <address className="mt-1 text-base not-italic text-accent-ink">
+                Adilflow · {site.addressLine}
+                <br />
+                <a href={`tel:${site.phoneTel}`}>{site.phoneDisplay}</a>
+              </address>
+              <p className="mt-1 text-sm text-muted">Remote · {site.remote}</p>
               <p className="mt-1 text-sm text-muted">Replies by email or WhatsApp, around your time zone.</p>
             </div>
           </aside>

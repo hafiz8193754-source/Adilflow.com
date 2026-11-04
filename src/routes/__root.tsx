@@ -68,10 +68,22 @@ function useGaPageViews() {
       const href = window.location.href;
       if (href === lastHref) return;
       lastHref = href;
-      window.gtag?.("event", "page_view", {
-        page_path: window.location.pathname + window.location.search,
-        page_location: href,
-        page_title: document.title,
+      // onResolved fires before <HeadContent/> commits the new <title>, so
+      // read the title from the resolved matches (deepest wins), then set it
+      // and send the page_view after the next frame so DOM + GA agree.
+      const matches = router.state.matches;
+      let title: string | undefined;
+      for (let i = matches.length - 1; i >= 0 && !title; i--) {
+        const meta = (matches[i] as { meta?: Array<{ title?: string } | undefined> }).meta;
+        title = meta?.find((m) => m?.title)?.title;
+      }
+      requestAnimationFrame(() => {
+        if (title && document.title !== title) document.title = title;
+        window.gtag?.("event", "page_view", {
+          page_path: window.location.pathname + window.location.search,
+          page_location: href,
+          page_title: title ?? document.title,
+        });
       });
     });
   }, [router]);

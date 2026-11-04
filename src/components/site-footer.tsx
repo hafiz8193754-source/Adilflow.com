@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { site } from "@/lib/site";
+import { site, socials } from "@/lib/site";
+import { serviceCatalog } from "@/lib/seo";
 
 const explore = [
   { to: "/portfolio" as const, label: "Work" },
@@ -18,7 +19,28 @@ export function SiteFooter() {
           <p className="mt-3 max-w-sm text-base text-on-ink-muted">
             Any digital workflow, automated with AI agents — websites, ads, social, and video. One accountable partner.
           </p>
-          <p className="mt-5 text-sm text-on-ink">Remote · {site.remote}</p>
+          <address className="mt-5 text-sm not-italic text-on-ink">
+            Adilflow · {site.addressLine}
+            <br />
+            <a href={`tel:${site.phoneTel}`} className="hover:text-accent">{site.phoneDisplay}</a> ·{" "}
+            <a href={`mailto:${site.email}`} className="hover:text-accent">{site.email}</a>
+          </address>
+          <p className="mt-2 text-sm text-on-ink-muted">Remote · {site.remote}</p>
+          <ul className="mt-3 flex flex-wrap gap-x-4 text-sm">
+            {[
+              ["Facebook", socials.facebook],
+              ["Instagram", socials.instagram],
+              ["TikTok", socials.tiktok],
+              ["X", socials.x],
+              ["LinkedIn", socials.linkedinPerson],
+            ].map(([label, href]) => (
+              <li key={label}>
+                <a href={href} target="_blank" rel="noreferrer me" className="inline-flex min-h-11 items-center text-on-ink-muted hover:text-accent">
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="md:col-span-3">
           <p className="text-sm tracking-widest text-on-ink-muted uppercase">Explore</p>
@@ -45,6 +67,30 @@ export function SiteFooter() {
           </ul>
         </div>
         <div className="md:col-span-4">
+          <p className="text-sm tracking-widest text-on-ink-muted uppercase">Services</p>
+          <ul className="mt-3 mb-8">
+            {serviceCatalog.map((item) => (
+              <li key={item.path}>
+                <a href={item.path} className="inline-flex min-h-11 items-center text-base text-on-ink hover:text-accent">
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p className="text-sm tracking-widest text-on-ink-muted uppercase">Markets</p>
+          <ul className="mt-3 mb-8">
+            {[
+              ["USA", "/us/ai-automation-agency"],
+              ["UK & Europe", "/uk-europe/ai-automation-agency"],
+              ["Dubai & UAE", "/dubai/ai-automation-agency"],
+            ].map(([label, href]) => (
+              <li key={href}>
+                <a href={href} className="inline-flex min-h-11 items-center text-base text-on-ink hover:text-accent">
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
           <p className="text-sm tracking-widest text-on-ink-muted uppercase">Contact</p>
           <ul className="mt-3">
             <li>
