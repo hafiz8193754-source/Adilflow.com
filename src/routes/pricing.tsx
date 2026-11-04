@@ -11,9 +11,9 @@ export const Route = createFileRoute("/pricing")({
   component: PricingPage,
   head: () =>
     pageHead({
-      title: "Pricing — Web Development, Social Media Marketing & AI Automation | Adilflow",
+      title: "Pricing: Web, AI Automation & Marketing | Adilflow",
       description:
-        "Custom quotes for web development, social media marketing and AI automation. Pricing is agreed after a short conversation and varies by country, scope and market.",
+        "How Adilflow prices websites, AI automation and marketing. Per-project quotes by scope and country; ad spend billed separately. Ask for a free estimate.",
       path: "/pricing",
     }),
 });

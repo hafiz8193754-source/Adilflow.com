@@ -14,9 +14,9 @@ export const Route = createFileRoute("/portfolio")({
   component: PortfolioPage,
   head: () =>
     pageHead({
-      title: "Selected Work — 40+ Live Websites | Adilflow",
+      title: "Portfolio: 40+ Live Websites & AI Builds | Adilflow",
       description:
-        "Live websites by Adilflow: education, home services, hospitality, commerce, and growth brands. A selection from 40+ shipped sites. Get a quote for yours.",
+        "See 40+ live websites, AI agents and automation projects built by Adilflow for businesses in the US, UK, Europe and Dubai, with results.",
       path: "/portfolio",
     }),
 });
@@ -36,7 +36,7 @@ function PortfolioPage() {
       <section className="dark-surface bg-ink py-16 md:py-20">
         <div className="site-wrap max-w-3xl">
           <p className="text-sm tracking-widest text-accent uppercase">Work</p>
-          <h1 className="mt-3 font-display text-5xl text-on-ink md:text-6xl">Portfolio</h1>
+          <h1 className="mt-3 font-display text-5xl text-on-ink md:text-6xl">Selected work: 40+ live projects</h1>
           <p className="mt-4 text-base text-on-ink-muted md:text-lg">
             Live products across education, hospitality, home services, commerce, and growth. Open any card to visit the site.
           </p>

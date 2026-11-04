@@ -67,7 +67,7 @@ export function PricingSection({ heading = "h2" }: { heading?: "h1" | "h2" }) {
     <section id="pricing" className="dark-surface scroll-mt-20 bg-ink py-20 text-on-ink md:py-28">
       <div className="site-wrap">
         <p className="text-sm tracking-widest text-accent uppercase">Pricing</p>
-        <H className="mt-3 font-display text-4xl md:text-5xl">Priced to your market, quoted to your brief</H>
+        <H className="mt-3 font-display text-4xl md:text-5xl">{heading === "h1" ? "Pricing for web, AI automation and marketing" : "Priced to your market, quoted to your brief"}</H>
         <p className="mt-4 max-w-2xl text-base text-on-ink-muted md:text-lg">{pricingNote}</p>
         <div className="mt-10">
           <PricingCards />

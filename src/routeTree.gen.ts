@@ -15,6 +15,14 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as DubaiAiAutomationAgencyRouteImport } from './routes/dubai.ai-automation-agency'
+import { Route as ServicesAiAutomationAgencyRouteImport } from './routes/services_.ai-automation-agency'
+import { Route as ServicesAiChatbotDevelopmentRouteImport } from './routes/services_.ai-chatbot-development'
+import { Route as ServicesPaidAdsRouteImport } from './routes/services_.paid-ads'
+import { Route as ServicesSeoServicesRouteImport } from './routes/services_.seo-services'
+import { Route as ServicesWebDevelopmentRouteImport } from './routes/services_.web-development'
+import { Route as UkEuropeAiAutomationAgencyRouteImport } from './routes/uk-europe.ai-automation-agency'
+import { Route as UsAiAutomationAgencyRouteImport } from './routes/us.ai-automation-agency'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +54,49 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DubaiAiAutomationAgencyRoute = DubaiAiAutomationAgencyRouteImport.update({
+  id: '/dubai/ai-automation-agency',
+  path: '/dubai/ai-automation-agency',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesAiAutomationAgencyRoute =
+  ServicesAiAutomationAgencyRouteImport.update({
+    id: '/services_/ai-automation-agency',
+    path: '/services/ai-automation-agency',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesAiChatbotDevelopmentRoute =
+  ServicesAiChatbotDevelopmentRouteImport.update({
+    id: '/services_/ai-chatbot-development',
+    path: '/services/ai-chatbot-development',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ServicesPaidAdsRoute = ServicesPaidAdsRouteImport.update({
+  id: '/services_/paid-ads',
+  path: '/services/paid-ads',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesSeoServicesRoute = ServicesSeoServicesRouteImport.update({
+  id: '/services_/seo-services',
+  path: '/services/seo-services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesWebDevelopmentRoute = ServicesWebDevelopmentRouteImport.update({
+  id: '/services_/web-development',
+  path: '/services/web-development',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UkEuropeAiAutomationAgencyRoute =
+  UkEuropeAiAutomationAgencyRouteImport.update({
+    id: '/uk-europe/ai-automation-agency',
+    path: '/uk-europe/ai-automation-agency',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const UsAiAutomationAgencyRoute = UsAiAutomationAgencyRouteImport.update({
+  id: '/us/ai-automation-agency',
+  path: '/us/ai-automation-agency',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +105,14 @@ export interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
+  '/dubai/ai-automation-agency': typeof DubaiAiAutomationAgencyRoute
+  '/services/ai-automation-agency': typeof ServicesAiAutomationAgencyRoute
+  '/services/ai-chatbot-development': typeof ServicesAiChatbotDevelopmentRoute
+  '/services/paid-ads': typeof ServicesPaidAdsRoute
+  '/services/seo-services': typeof ServicesSeoServicesRoute
+  '/services/web-development': typeof ServicesWebDevelopmentRoute
+  '/uk-europe/ai-automation-agency': typeof UkEuropeAiAutomationAgencyRoute
+  '/us/ai-automation-agency': typeof UsAiAutomationAgencyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +121,14 @@ export interface FileRoutesByTo {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
+  '/dubai/ai-automation-agency': typeof DubaiAiAutomationAgencyRoute
+  '/services/ai-automation-agency': typeof ServicesAiAutomationAgencyRoute
+  '/services/ai-chatbot-development': typeof ServicesAiChatbotDevelopmentRoute
+  '/services/paid-ads': typeof ServicesPaidAdsRoute
+  '/services/seo-services': typeof ServicesSeoServicesRoute
+  '/services/web-development': typeof ServicesWebDevelopmentRoute
+  '/uk-europe/ai-automation-agency': typeof UkEuropeAiAutomationAgencyRoute
+  '/us/ai-automation-agency': typeof UsAiAutomationAgencyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,13 +138,48 @@ export interface FileRoutesById {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
+  '/dubai/ai-automation-agency': typeof DubaiAiAutomationAgencyRoute
+  '/services_/ai-automation-agency': typeof ServicesAiAutomationAgencyRoute
+  '/services_/ai-chatbot-development': typeof ServicesAiChatbotDevelopmentRoute
+  '/services_/paid-ads': typeof ServicesPaidAdsRoute
+  '/services_/seo-services': typeof ServicesSeoServicesRoute
+  '/services_/web-development': typeof ServicesWebDevelopmentRoute
+  '/uk-europe/ai-automation-agency': typeof UkEuropeAiAutomationAgencyRoute
+  '/us/ai-automation-agency': typeof UsAiAutomationAgencyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/contact' | '/portfolio' | '/pricing' | '/services'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/portfolio'
+    | '/pricing'
+    | '/services'
+    | '/dubai/ai-automation-agency'
+    | '/services/ai-automation-agency'
+    | '/services/ai-chatbot-development'
+    | '/services/paid-ads'
+    | '/services/seo-services'
+    | '/services/web-development'
+    | '/uk-europe/ai-automation-agency'
+    | '/us/ai-automation-agency'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/portfolio' | '/pricing' | '/services'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/portfolio'
+    | '/pricing'
+    | '/services'
+    | '/dubai/ai-automation-agency'
+    | '/services/ai-automation-agency'
+    | '/services/ai-chatbot-development'
+    | '/services/paid-ads'
+    | '/services/seo-services'
+    | '/services/web-development'
+    | '/uk-europe/ai-automation-agency'
+    | '/us/ai-automation-agency'
   id:
     | '__root__'
     | '/'
@@ -86,6 +188,14 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/services'
+    | '/dubai/ai-automation-agency'
+    | '/services_/ai-automation-agency'
+    | '/services_/ai-chatbot-development'
+    | '/services_/paid-ads'
+    | '/services_/seo-services'
+    | '/services_/web-development'
+    | '/uk-europe/ai-automation-agency'
+    | '/us/ai-automation-agency'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -95,6 +205,14 @@ export interface RootRouteChildren {
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
   ServicesRoute: typeof ServicesRoute
+  DubaiAiAutomationAgencyRoute: typeof DubaiAiAutomationAgencyRoute
+  ServicesAiAutomationAgencyRoute: typeof ServicesAiAutomationAgencyRoute
+  ServicesAiChatbotDevelopmentRoute: typeof ServicesAiChatbotDevelopmentRoute
+  ServicesPaidAdsRoute: typeof ServicesPaidAdsRoute
+  ServicesSeoServicesRoute: typeof ServicesSeoServicesRoute
+  ServicesWebDevelopmentRoute: typeof ServicesWebDevelopmentRoute
+  UkEuropeAiAutomationAgencyRoute: typeof UkEuropeAiAutomationAgencyRoute
+  UsAiAutomationAgencyRoute: typeof UsAiAutomationAgencyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -141,6 +259,62 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/dubai/ai-automation-agency': {
+      id: '/dubai/ai-automation-agency'
+      path: '/dubai/ai-automation-agency'
+      fullPath: '/dubai/ai-automation-agency'
+      preLoaderRoute: typeof DubaiAiAutomationAgencyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services_/ai-automation-agency': {
+      id: '/services_/ai-automation-agency'
+      path: '/services/ai-automation-agency'
+      fullPath: '/services/ai-automation-agency'
+      preLoaderRoute: typeof ServicesAiAutomationAgencyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services_/ai-chatbot-development': {
+      id: '/services_/ai-chatbot-development'
+      path: '/services/ai-chatbot-development'
+      fullPath: '/services/ai-chatbot-development'
+      preLoaderRoute: typeof ServicesAiChatbotDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services_/paid-ads': {
+      id: '/services_/paid-ads'
+      path: '/services/paid-ads'
+      fullPath: '/services/paid-ads'
+      preLoaderRoute: typeof ServicesPaidAdsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services_/seo-services': {
+      id: '/services_/seo-services'
+      path: '/services/seo-services'
+      fullPath: '/services/seo-services'
+      preLoaderRoute: typeof ServicesSeoServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services_/web-development': {
+      id: '/services_/web-development'
+      path: '/services/web-development'
+      fullPath: '/services/web-development'
+      preLoaderRoute: typeof ServicesWebDevelopmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/uk-europe/ai-automation-agency': {
+      id: '/uk-europe/ai-automation-agency'
+      path: '/uk-europe/ai-automation-agency'
+      fullPath: '/uk-europe/ai-automation-agency'
+      preLoaderRoute: typeof UkEuropeAiAutomationAgencyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/us/ai-automation-agency': {
+      id: '/us/ai-automation-agency'
+      path: '/us/ai-automation-agency'
+      fullPath: '/us/ai-automation-agency'
+      preLoaderRoute: typeof UsAiAutomationAgencyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -151,6 +325,14 @@ const rootRouteChildren: RootRouteChildren = {
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
   ServicesRoute: ServicesRoute,
+  DubaiAiAutomationAgencyRoute: DubaiAiAutomationAgencyRoute,
+  ServicesAiAutomationAgencyRoute: ServicesAiAutomationAgencyRoute,
+  ServicesAiChatbotDevelopmentRoute: ServicesAiChatbotDevelopmentRoute,
+  ServicesPaidAdsRoute: ServicesPaidAdsRoute,
+  ServicesSeoServicesRoute: ServicesSeoServicesRoute,
+  ServicesWebDevelopmentRoute: ServicesWebDevelopmentRoute,
+  UkEuropeAiAutomationAgencyRoute: UkEuropeAiAutomationAgencyRoute,
+  UsAiAutomationAgencyRoute: UsAiAutomationAgencyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

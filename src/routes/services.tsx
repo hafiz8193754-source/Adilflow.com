@@ -3,7 +3,8 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { AiVideos } from "@/components/ai-videos";
 import { SiteShell } from "@/components/site-shell";
 import { Button } from "@/components/ui/button";
-import { pageHead } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
+import { offerCatalogJson, pageHead, serviceCatalog } from "@/lib/seo";
 import { agentAutomation, caseStudies, homeServices, moreServices, process, stack } from "@/lib/site";
 
 const services = [...homeServices, ...moreServices];
@@ -12,9 +13,9 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () =>
     pageHead({
-      title: "Services — Web, AI, SEO & Paid Media | Adilflow",
+      title: "Services: AI Agents, Web Dev, SEO & Ads | Adilflow",
       description:
-        "Full-stack web development, AI agents that automate any digital workflow — Meta, Google, LinkedIn and TikTok ads campaigns, web development, social media marketing, and video generation — from Adilflow. One partner for the site, the workflow, and the growth. Get a quote today.",
+        "AI automation, chatbot development, full-stack websites, SEO and Google/Meta ads under one roof. See what each service includes and request a quote.",
       path: "/services",
     }),
 });
@@ -22,13 +23,23 @@ export const Route = createFileRoute("/services")({
 function ServicesPage() {
   return (
     <SiteShell>
+      <JsonLd data={offerCatalogJson} />
       <section className="dark-surface bg-ink py-16 md:py-20">
         <div className="site-wrap max-w-3xl">
           <p className="text-sm tracking-widest text-accent uppercase">Services</p>
-          <h1 className="mt-3 font-display text-5xl text-on-ink md:text-6xl">End-to-end digital systems</h1>
+          <h1 className="mt-3 font-display text-5xl text-on-ink md:text-6xl">AI automation, web development, SEO and ads</h1>
           <p className="mt-4 text-base text-on-ink-muted md:text-lg">
             From marketing to development to AI automation — scoped as one engagement, or as a precise slice of it.
           </p>
+          <ul className="mt-6 flex flex-wrap gap-2">
+            {serviceCatalog.map((item) => (
+              <li key={item.path}>
+                <a href={item.path} className="inline-flex min-h-11 items-center rounded-full border border-ink-line px-4 text-sm text-on-ink hover:border-accent hover:text-accent">
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ul>
           <div className="mt-8 rounded-2xl border border-accent/40 bg-ink-raised p-6 md:p-8">
             <p className="text-sm tracking-widest text-accent uppercase">{agentAutomation.eyebrow}</p>
             <h2 className="mt-2 font-display text-3xl text-on-ink md:text-4xl">{agentAutomation.title}</h2>
