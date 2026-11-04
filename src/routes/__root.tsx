@@ -1,7 +1,16 @@
-import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
+import { useEffect } from "react";
+import { createRootRoute, HeadContent, Outlet, Scripts, useRouter } from "@tanstack/react-router";
 import { Analytics } from "@vercel/analytics/react";
 import { NotFoundPage } from "@/components/not-found";
 import appCss from "../styles.css?url";
+
+const GA_ID = "G-KBPVMLYNST";
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
 
 export const Route = createRootRoute({
   head: () => ({
@@ -39,12 +48,37 @@ export const Route = createRootRoute({
       },
       { rel: "stylesheet", href: appCss },
     ],
+    scripts: [
+      { src: `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`, async: true },
+      {
+        children: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}',{send_page_view:true});`,
+      },
+    ],
   }),
   component: RootDocument,
   notFoundComponent: NotFoundPage,
 });
 
+function useGaPageViews() {
+  const router = useRouter();
+  useEffect(() => {
+    // Initial load is counted by gtag('config'); only track subsequent navigations.
+    let lastHref = window.location.href;
+    return router.subscribe("onResolved", () => {
+      const href = window.location.href;
+      if (href === lastHref) return;
+      lastHref = href;
+      window.gtag?.("event", "page_view", {
+        page_path: window.location.pathname + window.location.search,
+        page_location: href,
+        page_title: document.title,
+      });
+    });
+  }, [router]);
+}
+
 function RootDocument() {
+  useGaPageViews();
   return (
     <html lang="en" className="antialiased" suppressHydrationWarning>
       <head>
