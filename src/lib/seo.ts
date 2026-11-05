@@ -13,10 +13,12 @@ export function pageHead({
   title,
   description,
   path,
+  type = "website",
 }: {
   title: string;
   description: string;
   path: string;
+  type?: "website" | "article";
 }) {
   const url = absoluteUrl(path);
   return {
@@ -26,7 +28,7 @@ export function pageHead({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:url", content: url },
-      { property: "og:type", content: "website" },
+      { property: "og:type", content: type },
       { property: "og:site_name", content: "Adilflow" },
       { property: "og:image", content: SHARE_IMAGE },
       { name: "twitter:card", content: "summary_large_image" },

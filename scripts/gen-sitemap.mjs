@@ -20,6 +20,10 @@ const routes = {
   "/us/ai-automation-agency": ["src/routes/us.ai-automation-agency.tsx", ...landing],
   "/uk-europe/ai-automation-agency": ["src/routes/uk-europe.ai-automation-agency.tsx", ...landing],
   "/dubai/ai-automation-agency": ["src/routes/dubai.ai-automation-agency.tsx", ...landing],
+  "/blog": ["src/routes/blog.index.tsx", "src/lib/blog-posts.ts"],
+  "/blog/ai-automation-for-small-businesses": ["src/lib/blog-posts.ts"],
+  "/blog/how-much-does-a-website-cost": ["src/lib/blog-posts.ts"],
+  "/blog/remote-web-developer-vs-local-agency": ["src/lib/blog-posts.ts"],
 };
 const today = new Date().toISOString().slice(0, 10);
 const lastmod = (files) => {

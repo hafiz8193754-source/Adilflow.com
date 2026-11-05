@@ -58,6 +58,15 @@ export function SiteHeader() {
               </Link>
             );
           })}
+          <Link
+            to="/blog"
+            className={cn(
+              "inline-flex min-h-11 items-center px-2.5 text-sm text-on-ink-muted hover:text-on-ink",
+              pathname.startsWith("/blog") && "text-on-ink",
+            )}
+          >
+            Blog
+          </Link>
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
@@ -101,6 +110,12 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
+            <Link
+              to="/blog"
+              className="inline-flex min-h-11 items-center border-b border-ink-line text-base text-on-ink"
+            >
+              Blog
+            </Link>
           </nav>
           <div className="mt-6 flex flex-col gap-3">
             <Button asChild variant="outline" className="w-full">

@@ -15,6 +15,8 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as DubaiAiAutomationAgencyRouteImport } from './routes/dubai.ai-automation-agency'
 import { Route as ServicesAiAutomationAgencyRouteImport } from './routes/services_.ai-automation-agency'
 import { Route as ServicesAiChatbotDevelopmentRouteImport } from './routes/services_.ai-chatbot-development'
@@ -52,6 +54,16 @@ const PricingRoute = PricingRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DubaiAiAutomationAgencyRoute = DubaiAiAutomationAgencyRouteImport.update({
@@ -105,6 +117,7 @@ export interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/dubai/ai-automation-agency': typeof DubaiAiAutomationAgencyRoute
   '/services/ai-automation-agency': typeof ServicesAiAutomationAgencyRoute
   '/services/ai-chatbot-development': typeof ServicesAiChatbotDevelopmentRoute
@@ -113,6 +126,7 @@ export interface FileRoutesByFullPath {
   '/services/web-development': typeof ServicesWebDevelopmentRoute
   '/uk-europe/ai-automation-agency': typeof UkEuropeAiAutomationAgencyRoute
   '/us/ai-automation-agency': typeof UsAiAutomationAgencyRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -121,6 +135,7 @@ export interface FileRoutesByTo {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/dubai/ai-automation-agency': typeof DubaiAiAutomationAgencyRoute
   '/services/ai-automation-agency': typeof ServicesAiAutomationAgencyRoute
   '/services/ai-chatbot-development': typeof ServicesAiChatbotDevelopmentRoute
@@ -129,6 +144,7 @@ export interface FileRoutesByTo {
   '/services/web-development': typeof ServicesWebDevelopmentRoute
   '/uk-europe/ai-automation-agency': typeof UkEuropeAiAutomationAgencyRoute
   '/us/ai-automation-agency': typeof UsAiAutomationAgencyRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -138,6 +154,7 @@ export interface FileRoutesById {
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/dubai/ai-automation-agency': typeof DubaiAiAutomationAgencyRoute
   '/services_/ai-automation-agency': typeof ServicesAiAutomationAgencyRoute
   '/services_/ai-chatbot-development': typeof ServicesAiChatbotDevelopmentRoute
@@ -146,6 +163,7 @@ export interface FileRoutesById {
   '/services_/web-development': typeof ServicesWebDevelopmentRoute
   '/uk-europe/ai-automation-agency': typeof UkEuropeAiAutomationAgencyRoute
   '/us/ai-automation-agency': typeof UsAiAutomationAgencyRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -156,6 +174,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/services'
+    | '/blog/$slug'
     | '/dubai/ai-automation-agency'
     | '/services/ai-automation-agency'
     | '/services/ai-chatbot-development'
@@ -164,6 +183,7 @@ export interface FileRouteTypes {
     | '/services/web-development'
     | '/uk-europe/ai-automation-agency'
     | '/us/ai-automation-agency'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -172,6 +192,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/services'
+    | '/blog/$slug'
     | '/dubai/ai-automation-agency'
     | '/services/ai-automation-agency'
     | '/services/ai-chatbot-development'
@@ -180,6 +201,7 @@ export interface FileRouteTypes {
     | '/services/web-development'
     | '/uk-europe/ai-automation-agency'
     | '/us/ai-automation-agency'
+    | '/blog'
   id:
     | '__root__'
     | '/'
@@ -188,6 +210,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/pricing'
     | '/services'
+    | '/blog/$slug'
     | '/dubai/ai-automation-agency'
     | '/services_/ai-automation-agency'
     | '/services_/ai-chatbot-development'
@@ -196,6 +219,7 @@ export interface FileRouteTypes {
     | '/services_/web-development'
     | '/uk-europe/ai-automation-agency'
     | '/us/ai-automation-agency'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -205,6 +229,7 @@ export interface RootRouteChildren {
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
   ServicesRoute: typeof ServicesRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   DubaiAiAutomationAgencyRoute: typeof DubaiAiAutomationAgencyRoute
   ServicesAiAutomationAgencyRoute: typeof ServicesAiAutomationAgencyRoute
   ServicesAiChatbotDevelopmentRoute: typeof ServicesAiChatbotDevelopmentRoute
@@ -213,6 +238,7 @@ export interface RootRouteChildren {
   ServicesWebDevelopmentRoute: typeof ServicesWebDevelopmentRoute
   UkEuropeAiAutomationAgencyRoute: typeof UkEuropeAiAutomationAgencyRoute
   UsAiAutomationAgencyRoute: typeof UsAiAutomationAgencyRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -257,6 +283,20 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dubai/ai-automation-agency': {
@@ -325,6 +365,7 @@ const rootRouteChildren: RootRouteChildren = {
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
   ServicesRoute: ServicesRoute,
+  BlogSlugRoute: BlogSlugRoute,
   DubaiAiAutomationAgencyRoute: DubaiAiAutomationAgencyRoute,
   ServicesAiAutomationAgencyRoute: ServicesAiAutomationAgencyRoute,
   ServicesAiChatbotDevelopmentRoute: ServicesAiChatbotDevelopmentRoute,
@@ -333,6 +374,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesWebDevelopmentRoute: ServicesWebDevelopmentRoute,
   UkEuropeAiAutomationAgencyRoute: UkEuropeAiAutomationAgencyRoute,
   UsAiAutomationAgencyRoute: UsAiAutomationAgencyRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
