@@ -1,3 +1,37 @@
 {
-  "installCommand": "npm install --omit=dev --no-audit --no-fund"
+  "installCommand": "npm install --omit=dev --no-audit --no-fund",
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/portfolio/:slug/",
+      "destination": "https://www.adilflow.com/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio/:slug",
+      "destination": "https://www.adilflow.com/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "https://www.adilflow.com/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html/",
+      "destination": "https://www.adilflow.com/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/:path+/",
+      "destination": "https://www.adilflow.com/:path+",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "adilflow.com" }],
+      "destination": "https://www.adilflow.com/:path*",
+      "permanent": true
+    }
+  ]
 }

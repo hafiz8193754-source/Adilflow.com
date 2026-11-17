@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
@@ -49,6 +50,11 @@ const PortfolioRoute = PortfolioRouteImport.update({
 const PricingRoute = PricingRouteImport.update({
   id: '/pricing',
   path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesRoute = ServicesRouteImport.update({
@@ -116,6 +122,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/dubai/ai-automation-agency': typeof DubaiAiAutomationAgencyRoute
@@ -134,6 +141,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/dubai/ai-automation-agency': typeof DubaiAiAutomationAgencyRoute
@@ -153,6 +161,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/portfolio': typeof PortfolioRoute
   '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/dubai/ai-automation-agency': typeof DubaiAiAutomationAgencyRoute
@@ -173,6 +182,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/portfolio'
     | '/pricing'
+    | '/privacy-policy'
     | '/services'
     | '/blog/$slug'
     | '/dubai/ai-automation-agency'
@@ -191,6 +201,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/portfolio'
     | '/pricing'
+    | '/privacy-policy'
     | '/services'
     | '/blog/$slug'
     | '/dubai/ai-automation-agency'
@@ -209,6 +220,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/portfolio'
     | '/pricing'
+    | '/privacy-policy'
     | '/services'
     | '/blog/$slug'
     | '/dubai/ai-automation-agency'
@@ -228,6 +240,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   PortfolioRoute: typeof PortfolioRoute
   PricingRoute: typeof PricingRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ServicesRoute: typeof ServicesRoute
   BlogSlugRoute: typeof BlogSlugRoute
   DubaiAiAutomationAgencyRoute: typeof DubaiAiAutomationAgencyRoute
@@ -276,6 +289,13 @@ declare module '@tanstack/react-router' {
       path: '/pricing'
       fullPath: '/pricing'
       preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services': {
@@ -364,6 +384,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   PortfolioRoute: PortfolioRoute,
   PricingRoute: PricingRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   ServicesRoute: ServicesRoute,
   BlogSlugRoute: BlogSlugRoute,
   DubaiAiAutomationAgencyRoute: DubaiAiAutomationAgencyRoute,

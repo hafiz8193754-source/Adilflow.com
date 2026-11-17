@@ -115,8 +115,11 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-      <div className="site-wrap border-t border-ink-line py-5 text-sm text-on-ink-muted">
-        © {new Date().getFullYear()} Adilflow. All rights reserved.
+      <div className="site-wrap flex flex-wrap items-center justify-between gap-3 border-t border-ink-line py-5 text-sm text-on-ink-muted">
+        <p>© {new Date().getFullYear()} Adilflow. All rights reserved.</p>
+        <Link to="/privacy-policy" className="inline-flex min-h-11 items-center hover:text-accent">
+          Privacy Policy
+        </Link>
       </div>
     </footer>
   );
