@@ -16,6 +16,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@ai-sdk/google": "^4.0.126",
     "@radix-ui/react-slot": "^1.2.4",
     "@tailwindcss/vite": "^4.3.0",
     "@tanstack/react-router": "^1.170.0",

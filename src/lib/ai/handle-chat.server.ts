@@ -1,5 +1,6 @@
 import "@tanstack/react-start/server-only";
-import { streamText, type ModelMessage } from "ai";
+import { google } from "@ai-sdk/google";
+import { streamText, type LanguageModel, type ModelMessage } from "ai";
 import { CHAT_MODEL, chatLimits } from "@/lib/ai/config";
 import { chatInstructions, FALLBACK_REPLY, STUB_REPLY } from "@/lib/ai/knowledge";
 import { allowRequest, clientIp } from "@/lib/ai/rate-limit";
@@ -40,8 +41,19 @@ function sanitize(body: unknown): ModelMessage[] | null {
   return recent;
 }
 
-function gatewayConfigured() {
-  return Boolean(process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN);
+function envSet(name: string) {
+  return Boolean(process.env[name]?.trim());
+}
+
+/**
+ * Gemini is the primary provider. AI Gateway is optional and only used when
+ * its API key is set and the Google key is not. Vercel OIDC is ignored:
+ * Gateway rejects this account with 403 customer_verification_required.
+ */
+function chatModel(): LanguageModel | null {
+  if (envSet("GOOGLE_GENERATIVE_AI_API_KEY")) return google(CHAT_MODEL);
+  if (envSet("AI_GATEWAY_API_KEY")) return `google/${CHAT_MODEL}`;
+  return null;
 }
 
 export async function handleChat(request: Request): Promise<Response> {
@@ -70,7 +82,8 @@ export async function handleChat(request: Request): Promise<Response> {
     return plain("Please send a short question about Adilflow's services.", 400, "fallback");
   }
 
-  if (!gatewayConfigured()) {
+  const model = chatModel();
+  if (!model) {
     const production = process.env.VERCEL_ENV === "production";
     return plain(production ? FALLBACK_REPLY : STUB_REPLY, 200, production ? "fallback" : "stub");
   }
@@ -81,7 +94,7 @@ export async function handleChat(request: Request): Promise<Response> {
 
   try {
     const result = streamText({
-      model: CHAT_MODEL,
+      model,
       instructions: chatInstructions,
       messages,
       maxOutputTokens: chatLimits.maxOutputTokens,

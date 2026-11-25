@@ -1,10 +1,11 @@
 /**
  * Single model id for the site chat demo.
- * Routed through Vercel AI Gateway (AI_GATEWAY_API_KEY, or OIDC on Vercel).
- * google/gemini-2.5-flash-lite is a current low-latency Gateway model
- * (about $0.10 / 1M input tokens and $0.40 / 1M output tokens).
+ * Primary path: Google AI Studio free tier via `@ai-sdk/google`
+ * (`GOOGLE_GENERATIVE_AI_API_KEY`). `gemini-2.5-flash-lite` is closed to new
+ * keys; `gemini-3.5-flash-lite` is the free-tier model that answers on v1beta.
+ * If only `AI_GATEWAY_API_KEY` is set, the same id is sent as `google/<id>`.
  */
-export const CHAT_MODEL = "google/gemini-2.5-flash-lite" as const;
+export const CHAT_MODEL = "gemini-3.5-flash-lite" as const;
 
 export const chatLimits = {
   /** Hard cap so a reply stays short on Hobby-plan CPU. */

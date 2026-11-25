@@ -87,7 +87,7 @@ Rules:
 Knowledge:
 ${chatKnowledge}`;
 
-export const STUB_REPLY = `This is a sample reply, not a live model response. No AI gateway key is configured in this environment.
+export const STUB_REPLY = `This is a sample reply, not a live model response. No Google AI key is configured in this environment.
 
 Adilflow builds website, WhatsApp, Instagram and Messenger chatbots, plus lead-capture, booking, support (trained on your FAQs) and WooCommerce or Shopify assistants. There is no public price — every project is a custom quote. Use Send your details, email ${site.email}, or WhatsApp ${site.phoneDisplay}.`;
 
