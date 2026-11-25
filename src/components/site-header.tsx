@@ -39,7 +39,7 @@ export function SiteHeader() {
   return (
     <header className="dark-surface sticky top-0 z-50 border-b border-ink-line bg-ink/95 text-on-ink backdrop-blur-md">
       <div className="site-wrap flex h-16 items-center justify-between gap-3">
-        <Logo />
+        <Logo className="lg:h-[22px] xl:h-8" />
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
           {nav.map((item) => {

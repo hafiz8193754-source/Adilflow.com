@@ -3,7 +3,7 @@ import { CtaStrip } from "@/components/cta-strip";
 import { JsonLd } from "@/components/json-ld";
 import { SiteShell } from "@/components/site-shell";
 import { getPost } from "@/lib/blog-posts";
-import { ORIGIN, breadcrumbJson, faqPageJson, pageHead } from "@/lib/seo";
+import { ORIGIN, SHARE_IMAGE, breadcrumbJson, faqPageJson, pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -35,10 +35,10 @@ function BlogPostPage() {
     dateModified: post.dateModified,
     keywords: post.keywords.join(", "),
     author: { "@type": "Person", "@id": `${ORIGIN}/about#adil`, name: "Muhammad Adil", url: `${ORIGIN}/about` },
-    publisher: { "@type": "Organization", "@id": `${ORIGIN}/#business`, name: "Adilflow", logo: { "@type": "ImageObject", url: `${ORIGIN}/favicon-32.png` } },
+    publisher: { "@type": "Organization", "@id": `${ORIGIN}/#business`, name: "Adilflow", logo: { "@type": "ImageObject", url: `${ORIGIN}/apple-touch-icon.png` } },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     url,
-    image: `${ORIGIN}/og.jpg`,
+    image: SHARE_IMAGE,
   };
   return (
     <SiteShell>
