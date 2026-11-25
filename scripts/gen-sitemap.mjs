@@ -14,7 +14,12 @@ const routes = {
   "/contact": ["src/routes/contact.tsx"],
   "/privacy-policy": ["src/routes/privacy-policy.tsx"],
   "/services/ai-automation-agency": ["src/routes/services_.ai-automation-agency.tsx", ...landing],
-  "/services/ai-chatbot-development": ["src/routes/services_.ai-chatbot-development.tsx", ...landing],
+  "/services/ai-chatbot-development": [
+    "src/routes/services_.ai-chatbot-development.tsx",
+    "src/components/ai-chatbot-page.tsx",
+    "src/lib/ai/knowledge.ts",
+    "src/lib/ai/chatbot-meta.ts",
+  ],
   "/services/web-development": ["src/routes/services_.web-development.tsx", ...landing],
   "/services/seo-services": ["src/routes/services_.seo-services.tsx", ...landing],
   "/services/paid-ads": ["src/routes/services_.paid-ads.tsx", ...landing],
@@ -29,15 +34,26 @@ const routes = {
 const today = new Date().toISOString().slice(0, 10);
 const lastmod = (files) => {
   try {
-    if (execSync(`git status --porcelain -- ${files.join(" ")}`).toString().trim()) return today;
-    return execSync(`git log -1 --format=%cs -- ${files.join(" ")}`).toString().trim() || today;
+    if (
+      execSync(`git status --porcelain -- ${files.join(" ")}`)
+        .toString()
+        .trim()
+    )
+      return today;
+    return (
+      execSync(`git log -1 --format=%cs -- ${files.join(" ")}`)
+        .toString()
+        .trim() || today
+    );
   } catch {
     return today;
   }
 };
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${Object.entries(routes).map(([p, f]) => `  <url><loc>${ORIGIN}${p}</loc><lastmod>${lastmod(f)}</lastmod></url>`).join("\n")}
+${Object.entries(routes)
+  .map(([p, f]) => `  <url><loc>${ORIGIN}${p}</loc><lastmod>${lastmod(f)}</lastmod></url>`)
+  .join("\n")}
 </urlset>
 `;
 writeFileSync("public/sitemap.xml", xml);

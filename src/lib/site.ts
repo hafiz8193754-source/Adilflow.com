@@ -572,6 +572,20 @@ export const homeServices = [
     ],
   },
   {
+    slug: "chatbots",
+    title: "AI chatbot development",
+    summary:
+      "Custom chatbots for your website, WhatsApp, Instagram and Messenger: lead capture, booking, support trained on your FAQs, and WooCommerce or Shopify assistants. Quoted per project.",
+    points: [
+      "Website chat, plus WhatsApp, Instagram and Messenger",
+      "Lead-capture and booking conversations",
+      "Support answers from your documents and FAQs",
+      "WooCommerce and Shopify product assistants",
+      "Hand-off to a person when the question needs one",
+      "Custom quote — no public price list",
+    ],
+  },
+  {
     slug: "full-stack",
     title: "Full-stack web development",
     summary:

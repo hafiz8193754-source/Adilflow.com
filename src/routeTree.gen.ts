@@ -16,6 +16,7 @@ import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ApiChatRouteImport } from './routes/api.chat'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as DubaiAiAutomationAgencyRouteImport } from './routes/dubai.ai-automation-agency'
@@ -60,6 +61,11 @@ const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiChatRoute = ApiChatRouteImport.update({
+  id: '/api/chat',
+  path: '/api/chat',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -124,6 +130,7 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
+  '/api/chat': typeof ApiChatRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/dubai/ai-automation-agency': typeof DubaiAiAutomationAgencyRoute
   '/services/ai-automation-agency': typeof ServicesAiAutomationAgencyRoute
@@ -143,6 +150,7 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
+  '/api/chat': typeof ApiChatRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/dubai/ai-automation-agency': typeof DubaiAiAutomationAgencyRoute
   '/services/ai-automation-agency': typeof ServicesAiAutomationAgencyRoute
@@ -163,6 +171,7 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/privacy-policy': typeof PrivacyPolicyRoute
   '/services': typeof ServicesRoute
+  '/api/chat': typeof ApiChatRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/dubai/ai-automation-agency': typeof DubaiAiAutomationAgencyRoute
   '/services_/ai-automation-agency': typeof ServicesAiAutomationAgencyRoute
@@ -184,6 +193,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy-policy'
     | '/services'
+    | '/api/chat'
     | '/blog/$slug'
     | '/dubai/ai-automation-agency'
     | '/services/ai-automation-agency'
@@ -203,6 +213,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy-policy'
     | '/services'
+    | '/api/chat'
     | '/blog/$slug'
     | '/dubai/ai-automation-agency'
     | '/services/ai-automation-agency'
@@ -222,6 +233,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy-policy'
     | '/services'
+    | '/api/chat'
     | '/blog/$slug'
     | '/dubai/ai-automation-agency'
     | '/services_/ai-automation-agency'
@@ -242,6 +254,7 @@ export interface RootRouteChildren {
   PricingRoute: typeof PricingRoute
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ServicesRoute: typeof ServicesRoute
+  ApiChatRoute: typeof ApiChatRoute
   BlogSlugRoute: typeof BlogSlugRoute
   DubaiAiAutomationAgencyRoute: typeof DubaiAiAutomationAgencyRoute
   ServicesAiAutomationAgencyRoute: typeof ServicesAiAutomationAgencyRoute
@@ -303,6 +316,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/chat': {
+      id: '/api/chat'
+      path: '/api/chat'
+      fullPath: '/api/chat'
+      preLoaderRoute: typeof ApiChatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -386,6 +406,7 @@ const rootRouteChildren: RootRouteChildren = {
   PricingRoute: PricingRoute,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
   ServicesRoute: ServicesRoute,
+  ApiChatRoute: ApiChatRoute,
   BlogSlugRoute: BlogSlugRoute,
   DubaiAiAutomationAgencyRoute: DubaiAiAutomationAgencyRoute,
   ServicesAiAutomationAgencyRoute: ServicesAiAutomationAgencyRoute,

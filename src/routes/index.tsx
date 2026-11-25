@@ -167,12 +167,21 @@ function Home() {
               <article key={service.slug} className="rounded-2xl border border-ink-line bg-ink-raised p-6">
                 <h3 className="font-display text-3xl text-on-ink">{service.title}</h3>
                 <p className="mt-3 text-base text-on-ink-muted">{service.summary}</p>
-                <Link
-                  to="/services"
-                  className="mt-4 inline-flex min-h-11 items-center text-base text-accent"
-                >
-                  See the detail
-                </Link>
+                {service.slug === "chatbots" ? (
+                  <Link
+                    to="/services/ai-chatbot-development"
+                    className="mt-4 inline-flex min-h-11 items-center text-base text-accent"
+                  >
+                    See the detail
+                  </Link>
+                ) : (
+                  <Link
+                    to="/services"
+                    className="mt-4 inline-flex min-h-11 items-center text-base text-accent"
+                  >
+                    See the detail
+                  </Link>
+                )}
               </article>
             ))}
           </div>

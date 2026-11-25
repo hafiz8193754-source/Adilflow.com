@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { ChatWidget } from "@/components/chat-widget";
 import { WhatsAppFab } from "@/components/whatsapp-fab";
 import { professionalServiceJson } from "@/lib/seo";
 
@@ -18,6 +19,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <SiteHeader />
       <main id="content">{children}</main>
       <SiteFooter />
+      <ChatWidget />
       <WhatsAppFab />
     </>
   );
