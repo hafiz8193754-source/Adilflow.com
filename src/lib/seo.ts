@@ -2,7 +2,7 @@ import { site, socials } from "@/lib/site";
 
 export const ORIGIN = "https://www.adilflow.com";
 
-const SHARE_IMAGE = `${ORIGIN}/og.jpg`;
+export const SHARE_IMAGE = `${ORIGIN}/event-horizon-premium-horizontal.png`;
 
 export function absoluteUrl(path: string) {
   if (path === "/") return `${ORIGIN}/`;
@@ -31,10 +31,14 @@ export function pageHead({
       { property: "og:type", content: type },
       { property: "og:site_name", content: "Adilflow" },
       { property: "og:image", content: SHARE_IMAGE },
+      { property: "og:image:width", content: "2000" },
+      { property: "og:image:height", content: "730" },
+      { property: "og:image:alt", content: "Adilflow" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
       { name: "twitter:image", content: SHARE_IMAGE },
+      { name: "twitter:image:alt", content: "Adilflow" },
     ],
     links: [{ rel: "canonical", href: url }],
   };
@@ -47,7 +51,7 @@ export const professionalServiceJson = {
   name: "Adilflow",
   url: `${ORIGIN}/`,
   image: `${ORIGIN}/images/adil-260.webp`,
-  logo: `${ORIGIN}/favicon-32.png`,
+  logo: `${ORIGIN}/apple-touch-icon.png`,
   telephone: site.phoneTel,
   email: site.email,
   priceRange: "$$",

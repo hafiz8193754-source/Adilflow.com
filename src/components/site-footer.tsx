@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { Logo } from "@/components/logo";
 import { site, socials } from "@/lib/site";
 import { serviceCatalog } from "@/lib/seo";
 
@@ -16,7 +17,7 @@ export function SiteFooter() {
     <footer className="dark-surface border-t border-ink-line bg-ink text-on-ink">
       <div className="site-wrap grid gap-10 py-14 md:grid-cols-12">
         <div className="md:col-span-5">
-          <p className="font-display text-3xl">Adilflow</p>
+          <Logo className="h-10" />
           <p className="mt-3 max-w-sm text-base text-on-ink-muted">
             Any digital workflow, automated with AI agents — websites, ads, social, and video. One accountable partner.
           </p>
