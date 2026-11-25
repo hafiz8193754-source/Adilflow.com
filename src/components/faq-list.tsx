@@ -3,13 +3,24 @@ import { ChevronDown } from "lucide-react";
 import { faqs } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
-export function FaqList({ tone = "cream" }: { tone?: "cream" | "ink" }) {
+export function FaqList({
+  tone = "cream",
+  items = faqs,
+}: {
+  tone?: "cream" | "ink";
+  items?: readonly { q: string; a: string }[];
+}) {
   const [open, setOpen] = useState<number | null>(0);
   const onCream = tone === "cream";
 
   return (
-    <div className={cn("divide-y", onCream ? "divide-line border-y border-line" : "divide-ink-line border-y border-ink-line")}>
-      {faqs.map((item, index) => {
+    <div
+      className={cn(
+        "divide-y",
+        onCream ? "divide-line border-y border-line" : "divide-ink-line border-y border-ink-line",
+      )}
+    >
+      {items.map((item, index) => {
         const isOpen = open === index;
         return (
           <div key={item.q}>
@@ -26,7 +37,12 @@ export function FaqList({ tone = "cream" }: { tone?: "cream" | "ink" }) {
               />
             </button>
             {isOpen ? (
-              <p className={cn("pb-5 text-base leading-relaxed", onCream ? "text-muted" : "text-on-ink-muted")}>
+              <p
+                className={cn(
+                  "pb-5 text-base leading-relaxed",
+                  onCream ? "text-muted" : "text-on-ink-muted",
+                )}
+              >
                 {item.a}
               </p>
             ) : null}

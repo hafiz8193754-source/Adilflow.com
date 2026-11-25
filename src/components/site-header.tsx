@@ -67,6 +67,15 @@ export function SiteHeader() {
           >
             Blog
           </Link>
+          <Link
+            to="/services/ai-chatbot-development"
+            className={cn(
+              "inline-flex min-h-11 items-center px-2.5 text-sm text-on-ink-muted hover:text-on-ink",
+              pathname === "/services/ai-chatbot-development" && "text-on-ink",
+            )}
+          >
+            Chatbots
+          </Link>
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
@@ -115,6 +124,12 @@ export function SiteHeader() {
               className="inline-flex min-h-11 items-center border-b border-ink-line text-base text-on-ink"
             >
               Blog
+            </Link>
+            <Link
+              to="/services/ai-chatbot-development"
+              className="inline-flex min-h-11 items-center border-b border-ink-line text-base text-on-ink"
+            >
+              Chatbots
             </Link>
           </nav>
           <div className="mt-6 flex flex-col gap-3">

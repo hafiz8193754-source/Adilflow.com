@@ -68,9 +68,19 @@ function ServicesPage() {
                   </li>
                 ))}
               </ul>
-              <Button asChild variant="outlineInk" className="mt-6">
-                <Link to="/contact">Get started</Link>
-              </Button>
+              <div className="mt-6 flex flex-col items-start gap-2">
+                {service.slug === "chatbots" ? (
+                  <a
+                    href="/services/ai-chatbot-development"
+                    className="inline-flex min-h-11 items-center text-base underline underline-offset-4"
+                  >
+                    AI chatbot services
+                  </a>
+                ) : null}
+                <Button asChild variant="outlineInk">
+                  <Link to="/contact">Get started</Link>
+                </Button>
+              </div>
             </article>
           ))}
         </div>

@@ -1,7 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LandingPage, landingHead } from "@/components/landing-page";
+import { AiChatbotPage } from "@/components/ai-chatbot-page";
+import { chatbotMeta } from "@/lib/ai/chatbot-meta";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/services_/ai-chatbot-development")({
-  component: () => <LandingPage path="/services/ai-chatbot-development" />,
-  head: () => landingHead("/services/ai-chatbot-development"),
+  component: AiChatbotPage,
+  head: () =>
+    pageHead({
+      title: chatbotMeta.title,
+      description: chatbotMeta.description,
+      path: chatbotMeta.path,
+    }),
 });
