@@ -6,10 +6,16 @@ import { ChatWidget } from "@/components/chat-widget";
 import { WhatsAppFab } from "@/components/whatsapp-fab";
 import { professionalServiceJson } from "@/lib/seo";
 
-export function SiteShell({ children }: { children: ReactNode }) {
+export function SiteShell({
+  children,
+  businessJsonLd = true,
+}: {
+  children: ReactNode;
+  businessJsonLd?: boolean;
+}) {
   return (
     <>
-      <JsonLd data={professionalServiceJson} />
+      {businessJsonLd ? <JsonLd data={professionalServiceJson} /> : null}
       <a
         href="#content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[60] focus:rounded-full focus:bg-accent focus:px-4 focus:py-3 focus:text-ink"

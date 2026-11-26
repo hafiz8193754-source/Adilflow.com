@@ -12,8 +12,10 @@ export const site = {
   availability: "Available for new projects",
   remote: "Working with clients worldwide",
   address: {
+    street: "Office 504B, Auriga Centre, Main Boulevard, Gulberg II",
     locality: "Lahore",
     region: "Punjab",
+    postalCode: "54660",
     country: "PK",
     countryName: "Pakistan",
   },
@@ -813,6 +815,19 @@ export const testimonials = [
     name: "Brand team",
     role: "NadGo",
     href: "https://www.nad-go.com/",
+  },
+] as const;
+
+export const guarantees = [
+  {
+    n: "01",
+    title: "100% code & asset ownership",
+    body: "On final payment, you own all custom code, designs, domains, and accounts. No vendor lock-in.",
+  },
+  {
+    n: "02",
+    title: "Your data stays secure",
+    body: "Client data, credentials, and project information are kept confidential and secure.",
   },
 ] as const;
 

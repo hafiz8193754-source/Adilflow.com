@@ -9,6 +9,7 @@ import {
 } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { CheckCircle2 } from "lucide-react";
+import { EnquiryLegalNote } from "@/components/enquiry-legal-note";
 import { LinkedInIcon } from "@/components/icons";
 import { SiteShell } from "@/components/site-shell";
 import { Button } from "@/components/ui/button";
@@ -270,6 +271,7 @@ function ContactPage() {
                     Or chat on WhatsApp
                   </a>
                 </Button>
+                <EnquiryLegalNote />
               </form>
             )}
           </div>
@@ -295,7 +297,9 @@ function ContactPage() {
                 <a href={`tel:${site.phoneTel}`}>{site.phoneDisplay}</a>
               </address>
               <p className="mt-1 text-sm text-muted">Remote · {site.remote}</p>
-              <p className="mt-1 text-sm text-muted">Replies by email or WhatsApp, around your time zone.</p>
+              <p className="mt-1 text-sm text-muted">
+                Replies by email or WhatsApp, around your time zone.
+              </p>
             </div>
           </aside>
         </div>
