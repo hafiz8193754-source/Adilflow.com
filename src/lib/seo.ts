@@ -32,7 +32,7 @@ export function pageHead({
       { property: "og:site_name", content: "Adilflow" },
       { property: "og:image", content: SHARE_IMAGE },
       { property: "og:image:width", content: "2000" },
-      { property: "og:image:height", content: "730" },
+      { property: "og:image:height", content: "715" },
       { property: "og:image:alt", content: "Adilflow" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
