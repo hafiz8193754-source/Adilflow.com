@@ -24,7 +24,7 @@ export function Logo({
       <img
         src={sources[tone]}
         alt="Adilflow"
-        width={405}
+        width={416}
         height={82}
         className={cn("h-8 w-auto", className)}
       />
