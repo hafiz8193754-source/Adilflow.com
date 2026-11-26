@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { Logo } from "@/components/logo";
 import { site, socials } from "@/lib/site";
 import { serviceCatalog } from "@/lib/seo";
@@ -13,6 +13,9 @@ const explore = [
 ];
 
 export function SiteFooter() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const showPlace = pathname !== "/privacy" && pathname !== "/terms";
+
   return (
     <footer className="dark-surface border-t border-ink-line bg-ink text-on-ink">
       <div className="site-wrap grid gap-10 py-14 md:grid-cols-12">
@@ -22,7 +25,7 @@ export function SiteFooter() {
             Any digital workflow, automated with AI agents — websites, ads, social, and video. One accountable partner.
           </p>
           <address className="mt-5 text-sm not-italic text-on-ink">
-            Adilflow · {site.addressLine}
+            Adilflow{showPlace ? ` · ${site.addressLine}` : ""}
             <br />
             <a href={`tel:${site.phoneTel}`} className="hover:text-accent">{site.phoneDisplay}</a> ·{" "}
             <a href={`mailto:${site.email}`} className="hover:text-accent">{site.email}</a>

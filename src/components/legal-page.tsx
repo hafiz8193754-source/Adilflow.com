@@ -17,7 +17,7 @@ export function LegalPage({
   children: ReactNode;
 }) {
   return (
-    <SiteShell>
+    <SiteShell businessJsonLd={false}>
       <section className="dark-surface bg-ink py-16 md:py-20">
         <div className="site-wrap max-w-3xl">
           <p className="text-sm tracking-widest text-accent uppercase">{kicker}</p>

@@ -11,7 +11,7 @@ export function GuaranteeGrid({
 }) {
   const onInk = tone === "ink";
   return (
-    <div className={cn("grid gap-4", compact ? "sm:grid-cols-2 lg:grid-cols-4" : "md:grid-cols-2")}>
+    <div className="grid gap-4 md:grid-cols-2">
       {guarantees.map((item) => (
         <article
           key={item.n}
@@ -38,14 +38,8 @@ export function GuaranteeGrid({
               {item.title}
             </h3>
           )}
-          <p
-            className={cn(
-              "mt-3 text-base",
-              onInk ? "text-on-ink-muted" : "text-muted",
-              compact && "text-sm",
-            )}
-          >
-            {compact ? item.compact : item.body}
+          <p className={cn("mt-3 text-base", onInk ? "text-on-ink-muted" : "text-muted")}>
+            {item.body}
           </p>
         </article>
       ))}
@@ -62,8 +56,7 @@ export function GuaranteesSection() {
           Agreed in writing, before work starts
         </h2>
         <p className="mt-4 max-w-2xl text-base text-muted md:text-lg">
-          Four commitments on every project. The proposal sets the exact scope, the milestone
-          schedule, and the support window.
+          Two commitments on every project.
         </p>
         <div className="mt-10">
           <GuaranteeGrid />

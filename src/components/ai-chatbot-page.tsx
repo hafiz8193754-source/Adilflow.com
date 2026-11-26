@@ -282,8 +282,7 @@ export function AiChatbotPage() {
           <div className="mt-10 border-t border-ink-line pt-8">
             <h3 className="font-display text-3xl">How an engagement is protected</h3>
             <p className="mt-3 max-w-2xl text-base text-on-ink-muted">
-              The same four commitments apply to a chatbot build. The proposal names the exact
-              scope, milestones, and support window.
+              The same two commitments apply to a chatbot build.
             </p>
             <div className="mt-6">
               <GuaranteeGrid tone="ink" compact />
