@@ -118,9 +118,14 @@ export function SiteFooter() {
       </div>
       <div className="site-wrap flex flex-wrap items-center justify-between gap-3 border-t border-ink-line py-5 text-sm text-on-ink-muted">
         <p>© {new Date().getFullYear()} Adilflow. All rights reserved.</p>
-        <Link to="/privacy-policy" className="inline-flex min-h-11 items-center hover:text-accent">
-          Privacy Policy
-        </Link>
+        <nav aria-label="Legal" className="flex flex-wrap gap-x-5">
+          <Link to="/privacy" className="inline-flex min-h-11 items-center hover:text-accent">
+            Privacy Policy
+          </Link>
+          <Link to="/terms" className="inline-flex min-h-11 items-center hover:text-accent">
+            Terms of Service
+          </Link>
+        </nav>
       </div>
     </footer>
   );

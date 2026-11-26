@@ -11,7 +11,9 @@ import { Link } from "@tanstack/react-router";
 import { Check, CheckCircle2 } from "lucide-react";
 import { ChatPanel } from "@/components/chat-panel";
 import { CtaStrip } from "@/components/cta-strip";
+import { EnquiryLegalNote } from "@/components/enquiry-legal-note";
 import { FaqList } from "@/components/faq-list";
+import { GuaranteeGrid } from "@/components/guarantees";
 import { JsonLd } from "@/components/json-ld";
 import { SiteShell } from "@/components/site-shell";
 import { Button } from "@/components/ui/button";
@@ -277,6 +279,16 @@ export function AiChatbotPage() {
               </article>
             ))}
           </div>
+          <div className="mt-10 border-t border-ink-line pt-8">
+            <h3 className="font-display text-3xl">How an engagement is protected</h3>
+            <p className="mt-3 max-w-2xl text-base text-on-ink-muted">
+              The same four commitments apply to a chatbot build. The proposal names the exact
+              scope, milestones, and support window.
+            </p>
+            <div className="mt-6">
+              <GuaranteeGrid tone="ink" compact />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -296,6 +308,10 @@ export function AiChatbotPage() {
                 contact page
               </Link>
               .
+            </p>
+            <p className="mt-4 text-base text-muted">
+              This demo sends what you type to Google Gemini to generate a reply. Do not share
+              passwords, payment details, or confidential business data here.
             </p>
           </div>
           <ChatPanel inputIdPrefix="demo" className="h-[32rem] max-h-[min(32rem,70dvh)]" />
@@ -504,6 +520,7 @@ function QuoteSection() {
               >
                 {status === "sending" ? "Sending…" : "Request a quote"}
               </Button>
+              <EnquiryLegalNote />
             </form>
           )}
         </div>

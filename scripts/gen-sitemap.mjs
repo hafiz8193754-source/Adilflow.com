@@ -12,7 +12,8 @@ const routes = {
   "/pricing": ["src/routes/pricing.tsx", "src/components/pricing-cards.tsx"],
   "/about": ["src/routes/about.tsx"],
   "/contact": ["src/routes/contact.tsx"],
-  "/privacy-policy": ["src/routes/privacy-policy.tsx"],
+  "/privacy": ["src/routes/privacy.tsx", "src/components/legal-page.tsx"],
+  "/terms": ["src/routes/terms.tsx", "src/components/legal-page.tsx"],
   "/services/ai-automation-agency": ["src/routes/services_.ai-automation-agency.tsx", ...landing],
   "/services/ai-chatbot-development": [
     "src/routes/services_.ai-chatbot-development.tsx",

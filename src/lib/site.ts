@@ -12,12 +12,15 @@ export const site = {
   availability: "Available for new projects",
   remote: "Working with clients worldwide",
   address: {
+    street: "Office 504B, Auriga Centre, Main Boulevard, Gulberg II",
     locality: "Lahore",
     region: "Punjab",
+    postalCode: "54660",
     country: "PK",
     countryName: "Pakistan",
   },
   addressLine: "Lahore, Punjab, Pakistan",
+  officeLine: "Office 504B, Auriga Centre, Main Boulevard, Gulberg II, Lahore 54660, Pakistan",
 } as const;
 
 export const socials = {
@@ -813,6 +816,33 @@ export const testimonials = [
     name: "Brand team",
     role: "NadGo",
     href: "https://www.nad-go.com/",
+  },
+] as const;
+
+export const guarantees = [
+  {
+    n: "01",
+    title: "100% code & asset ownership",
+    body: "On final payment, you own the custom source code, designs, domains, and accounts created for the project. No vendor lock-in.",
+    compact: "On final payment, you own the custom code, designs, domains, and accounts.",
+  },
+  {
+    n: "02",
+    title: "Milestone-based payments",
+    body: "A written scope and milestone schedule are agreed before work starts. Payment is by bank transfer, Wise, or Payoneer.",
+    compact: "Written scope and milestones first. Pay by bank transfer, Wise, or Payoneer.",
+  },
+  {
+    n: "03",
+    title: "NDA & confidentiality",
+    body: "A mutual NDA is signed on request, before you share business data, credentials, or internal workflows.",
+    compact: "A mutual NDA is signed on request, before you share confidential data.",
+  },
+  {
+    n: "04",
+    title: "Post-launch support",
+    body: "Bug-fix and handover support is included after launch, for the window agreed in the written proposal, plus clean documentation.",
+    compact: "Bug-fixes, handover, and documentation for the window in the proposal.",
   },
 ] as const;
 

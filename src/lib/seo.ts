@@ -59,8 +59,10 @@ export const professionalServiceJson = {
     "Adilflow builds AI agents, chatbots, workflow automation, full-stack websites, SEO and Google/Meta ads for businesses in the US, UK, Europe, the UAE and worldwide.",
   address: {
     "@type": "PostalAddress",
+    streetAddress: site.address.street,
     addressLocality: site.address.locality,
     addressRegion: site.address.region,
+    postalCode: site.address.postalCode,
     addressCountry: site.address.country,
   },
   founder: { "@id": `${ORIGIN}/about#adil` },
