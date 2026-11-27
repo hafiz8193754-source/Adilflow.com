@@ -74,7 +74,7 @@ function FeaturedCard({ project, headingLevel }: { project: FeaturedProject; hea
             <a
               href={project.href}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex min-h-11 items-center gap-1.5 text-base font-medium text-fg underline decoration-fg/30 underline-offset-4 hover:decoration-fg"
             >
               Visit {project.domain}
