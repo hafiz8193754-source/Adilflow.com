@@ -66,6 +66,10 @@ export const projectSources = {
       { src: "/images/projects/nbfashion-640.webp", w: 640, h: 400 },
       { src: "/images/projects/nbfashion-1200.webp", w: 1200, h: 750 },
   ],
+  "falak-raj": [
+      { src: "/images/projects/falak-raj-640.webp", w: 640, h: 400 },
+      { src: "/images/projects/falak-raj-1200.webp", w: 1200, h: 750 },
+  ],
   "patroc": [
       { src: "/images/projects/patroc-640.webp", w: 640, h: 400 },
       { src: "/images/projects/patroc-1200.webp", w: 1200, h: 750 },

@@ -69,7 +69,7 @@ Published figures (do not extend them, and do not treat illustrative ones as gua
 - Marketing results on the homepage are labelled illustrative (example ROAS, example organic traffic lift, example lower cost-per-lead, audience grown, example qualified leads). Say they are examples from the site, not a promise.
 
 Names shown on the site
-- Client names listed on the site include ONYX Research, MetaX Payments, NadGo, TikMove, Saucedo Pools & Spas, Ferienwohnung Fiescheralp, Urke Gartneri, Inzimation Edu, Team Pat The Roc, AI Aunties, ProBuilt Window Screens, NB Fashion and PSCO. More projects are on /portfolio.
+- Client names listed on the site include ONYX Research, MetaX Payments, NadGo, TikMove, Saucedo Pools & Spas, Ferienwohnung Fiescheralp, Urke Gartneri, Inzimation Edu, Team Pat The Roc, AI Aunties, ProBuilt Window Screens, NB Fashion, Falak Raj Studio and PSCO. More projects are on /portfolio.
 - These are website and product projects on the portfolio. Do not say a chatbot was delivered for any of them. The site does not publish a chatbot case study.
 - Homepage testimonials are attributed to M. Inzimam Sajid (Inzimation Edu), the product team at ONYX Research, and the brand team at NadGo. Do not invent quotes or paraphrase praise. Point people to the homepage for the words themselves.
 

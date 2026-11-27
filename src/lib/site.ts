@@ -128,6 +128,7 @@ export const clientNames = [
   "AI Aunties",
   "ProBuilt Window Screens",
   "NB Fashion",
+  "Falak Raj Studio",
   "PSCO",
 ] as const;
 
@@ -240,9 +241,28 @@ export type FeaturedProject = {
 
 /**
  * Featured case studies. Every overview and feature below describes only what is
- * visible on the live site (checked October 2026). Screenshots are real captures.
+ * visible on the live site. Screenshots are real captures.
  */
 export const featuredProjects: readonly FeaturedProject[] = [
+  {
+    slug: "falak-raj",
+    title: "Falak Raj Studio",
+    domain: "falakraj.com",
+    href: "https://falakraj.com",
+    image: "falak-raj",
+    recent: false,
+    overview:
+      "An editorial luxury storefront for a couture bridal and made-to-measure pret atelier — curated collection showcases, a bespoke lookbook, and a direct WhatsApp path for orders and consultations.",
+    role: "Full Stack Developer (Custom)",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    features: [
+      "Curated collection showcases, including Bridals '26",
+      "Bespoke lookbook presentation",
+      "Direct WhatsApp order and consultation flow",
+      "Instagram and Facebook integration",
+      "Responsive, mobile-first layout",
+    ],
+  },
   {
     slug: "ptpc-com",
     title: "PTPC — Pakistan Tourism Promotion Council",
@@ -303,6 +323,7 @@ export const featuredProjects: readonly FeaturedProject[] = [
 ];
 
 export const homeProjectOrder = [
+  "falak-raj",
   "onyx",
   "metax",
   "nad-go",
@@ -314,6 +335,18 @@ export const homeProjectOrder = [
 ] as const;
 
 export const projects: Project[] = [
+  {
+    slug: "falak-raj",
+    title: "Falak Raj Studio",
+    client: "Luxury bridal couture and pret atelier",
+    category: "E-commerce",
+    description:
+      "An editorial luxury storefront for a couture bridal and made-to-measure pret atelier — curated collections, including Bridals '26, a bespoke lookbook, and WhatsApp ordering and consultations.",
+    outcome: "Collection showcases, lookbook presentation, and WhatsApp consultation in one mobile-first storefront.",
+    href: "https://falakraj.com",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    homeLabel: "Falak Raj Studio",
+  },
   {
     slug: "onyx",
     title: "ONYX Research",
